@@ -1,0 +1,2392 @@
+* docker compose up -d
+Network sandbox_default  Creating
+Network sandbox_default  Created
+Container algorand-sandbox-postgres  Creating
+Container algorand-sandbox-algod  Creating
+Container algorand-sandbox-algod  Created
+Container algorand-sandbox-postgres  Created
+Container algorand-sandbox-conduit  Creating
+Container algorand-sandbox-conduit  Created
+Container algorand-sandbox-indexer  Creating
+Container algorand-sandbox-indexer  Created
+Container algorand-sandbox-algod  Starting
+Container algorand-sandbox-postgres  Starting
+Container algorand-sandbox-postgres  Started
+Container algorand-sandbox-algod  Started
+Container algorand-sandbox-conduit  Starting
+Container algorand-sandbox-conduit  Started
+Container algorand-sandbox-indexer  Starting
+Container algorand-sandbox-indexer  Started
+.clean file NOT FOUND. Sandbox images will NOT be rebuilt.
+* docker compose up -d
+Container algorand-sandbox-postgres  Running
+Container algorand-sandbox-algod  Running
+Container algorand-sandbox-indexer  Running
+Container algorand-sandbox-conduit  Starting
+Container algorand-sandbox-conduit  Started
+* docker compose down
+Container algorand-sandbox-indexer  Stopping
+Container algorand-sandbox-indexer  Stopping
+Container algorand-sandbox-indexer  Stopped
+Container algorand-sandbox-indexer  Removing
+Container algorand-sandbox-indexer  Removed
+Container algorand-sandbox-conduit  Stopping
+Container algorand-sandbox-conduit  Stopping
+Container algorand-sandbox-conduit  Stopped
+Container algorand-sandbox-conduit  Removing
+Container algorand-sandbox-conduit  Removed
+Container algorand-sandbox-algod  Stopping
+Container algorand-sandbox-algod  Stopping
+Container algorand-sandbox-postgres  Stopping
+Container algorand-sandbox-postgres  Stopping
+Container algorand-sandbox-algod  Stopped
+Container algorand-sandbox-algod  Removing
+Container algorand-sandbox-postgres  Stopped
+Container algorand-sandbox-postgres  Removing
+Container algorand-sandbox-postgres  Removed
+Container algorand-sandbox-algod  Removed
+Network sandbox_default  Removing
+Network sandbox_default  Removed
+* docker rmi sandbox_algod sandbox_indexer
+Error: No such image: sandbox_algod
+Error: No such image: sandbox_indexer
+* docker compose rm -f
+No stopped containers
+* docker rmi f9d2abcf6f69
+5743e8bdf241
+Deleted: sha256:f9d2abcf6f69d65a075dbcb8e3fc4b121fbd69e8d165d3e8b73fbe45bcd39253
+Deleted: sha256:5743e8bdf241350b35e85d76943efcf144481df87b6bb633bef04df82db5601c
+.clean file found in sandbox directory. Rebuilding images...
+* docker compose build --no-cache --progress plain
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.59kB 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 73B done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/golang:1.20.5
+#3 DONE 2.6s
+
+#4 [internal] load build context
+#4 transferring context: 122.35kB 0.0s done
+#4 DONE 0.1s
+
+#5 [1/7] FROM docker.io/library/golang:1.20.5@sha256:fd9306e1c664bd49a11d4a4a04e41303430e069e437d137876e9290a555e06fb
+#5 resolve docker.io/library/golang:1.20.5@sha256:fd9306e1c664bd49a11d4a4a04e41303430e069e437d137876e9290a555e06fb 0.0s done
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 0B / 24.03MB 0.2s
+#5 sha256:fd9306e1c664bd49a11d4a4a04e41303430e069e437d137876e9290a555e06fb 2.36kB / 2.36kB done
+#5 sha256:7f2cf491a0d8c1afcdc55120cda9d3777ee98852eff619c6c3e5a0b2386a69b4 1.58kB / 1.58kB done
+#5 sha256:d5a118f29bfadd6529ee8da6b1261fab7d0d80de3bb9b496ee6a189a21f17029 6.86kB / 6.86kB done
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 0B / 49.55MB 0.2s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 0B / 64.11MB 0.2s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 3.15MB / 49.55MB 1.2s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 6.29MB / 49.55MB 2.3s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 2.10MB / 24.03MB 2.5s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 9.44MB / 49.55MB 3.6s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 4.19MB / 24.03MB 3.8s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 6.29MB / 24.03MB 4.9s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 12.58MB / 49.55MB 4.9s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 2.10MB / 64.11MB 5.2s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 15.73MB / 49.55MB 6.2s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 8.39MB / 24.03MB 6.5s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 18.87MB / 49.55MB 7.5s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 10.49MB / 24.03MB 7.8s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 12.58MB / 24.03MB 9.1s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 22.02MB / 49.55MB 9.1s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 6.29MB / 64.11MB 9.7s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 14.68MB / 24.03MB 10.5s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 25.17MB / 49.55MB 11.4s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 16.78MB / 24.03MB 11.6s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 18.87MB / 24.03MB 12.8s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 28.31MB / 49.55MB 13.7s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 20.97MB / 24.03MB 14.0s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 9.44MB / 64.11MB 14.7s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 23.07MB / 24.03MB 15.0s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 31.46MB / 49.55MB 15.4s
+#5 sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 24.03MB / 24.03MB 15.6s done
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 0B / 92.23MB 15.7s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 34.60MB / 49.55MB 17.3s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 5.24MB / 92.23MB 18.5s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 37.75MB / 49.55MB 19.5s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 13.63MB / 64.11MB 19.5s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 9.97MB / 92.23MB 21.2s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 40.89MB / 49.55MB 21.4s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 44.04MB / 49.55MB 23.9s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 14.68MB / 92.23MB 23.9s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 16.78MB / 64.11MB 24.5s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 47.19MB / 49.55MB 26.0s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 19.92MB / 92.23MB 26.9s
+#5 sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 49.55MB / 49.55MB 27.6s done
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 0B / 100.20MB 27.7s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 20.97MB / 64.11MB 27.8s
+#5 extracting sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 25.17MB / 92.23MB 29.7s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 25.17MB / 64.11MB 31.2s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 30.41MB / 92.23MB 32.1s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 5.24MB / 100.20MB 32.1s
+#5 extracting sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 5.3s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 29.36MB / 64.11MB 34.3s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 35.23MB / 92.23MB 34.9s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 10.49MB / 100.20MB 36.7s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 39.85MB / 92.23MB 37.5s
+#5 extracting sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 9.8s done
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 33.55MB / 64.11MB 38.0s
+#5 extracting sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 15.73MB / 100.20MB 41.1s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 37.75MB / 64.11MB 41.3s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 45.09MB / 92.23MB 41.3s
+#5 extracting sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 5.1s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 50.33MB / 92.23MB 44.3s
+#5 extracting sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 6.1s done
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 41.94MB / 64.11MB 44.7s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 20.97MB / 100.20MB 45.2s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 55.57MB / 92.23MB 47.7s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 46.14MB / 64.11MB 48.0s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 26.21MB / 100.20MB 49.7s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 60.61MB / 92.23MB 52.6s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 50.33MB / 64.11MB 52.8s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 29.36MB / 100.20MB 54.8s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 66.06MB / 92.23MB 55.7s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 54.06MB / 64.11MB 56.9s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 70.98MB / 92.23MB 58.0s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 57.67MB / 64.11MB 59.3s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 34.60MB / 100.20MB 59.7s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 76.55MB / 92.23MB 60.8s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 61.87MB / 64.11MB 62.5s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 81.79MB / 92.23MB 63.3s
+#5 sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 64.11MB / 64.11MB 64.3s done
+#5 sha256:c7ad738259f2ede8cfe2e998bd5abecbbf5089124842893452008bc64055d4a9 0B / 155B 64.5s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 38.80MB / 100.20MB 64.8s
+#5 extracting sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc
+#5 sha256:c7ad738259f2ede8cfe2e998bd5abecbbf5089124842893452008bc64055d4a9 155B / 155B 65.0s
+#5 sha256:c7ad738259f2ede8cfe2e998bd5abecbbf5089124842893452008bc64055d4a9 155B / 155B 65.0s done
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 87.03MB / 92.23MB 65.4s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 92.23MB / 92.23MB 67.0s
+#5 sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 92.23MB / 92.23MB 67.1s done
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 44.04MB / 100.20MB 68.0s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 49.28MB / 100.20MB 69.3s
+#5 extracting sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 5.2s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 54.53MB / 100.20MB 70.5s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 59.77MB / 100.20MB 71.7s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 65.01MB / 100.20MB 73.0s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 70.25MB / 100.20MB 74.3s
+#5 extracting sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 10.5s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 75.50MB / 100.20MB 75.5s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 80.74MB / 100.20MB 76.6s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 85.98MB / 100.20MB 77.7s
+#5 extracting sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 13.1s done
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 0.1s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 92.27MB / 100.20MB 79.5s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 97.34MB / 100.20MB 80.6s
+#5 sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 100.20MB / 100.20MB 81.4s done
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 5.2s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 10.2s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 21.5s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 38.0s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 43.1s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 49.8s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 62.9s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 68.2s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 73.4s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 86.9s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 92.1s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 97.4s
+#5 extracting sha256:543c0c50a70de44530fb9f35321081e7dd67f9aeae1ca5ab99161eb6322e2868 98.0s done
+#5 extracting sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d
+#5 extracting sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 5.5s
+#5 extracting sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 10.7s
+#5 extracting sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 15.8s
+#5 extracting sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 21.1s
+#5 extracting sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 26.4s
+#5 extracting sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 64.1s
+#5 extracting sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 69.6s
+#5 extracting sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 74.7s
+#5 extracting sha256:aec14dce7e7846bbadf40f19d3d871f619c54c1fa6296cc3cfaa810b3c66024d 82.5s done
+#5 extracting sha256:c7ad738259f2ede8cfe2e998bd5abecbbf5089124842893452008bc64055d4a9 done
+#5 DONE 262.9s
+
+#6 [2/7] RUN echo "Installing from source.  -- "
+#6 5.400 Installing from source.  -- 
+#6 DONE 14.8s
+
+#7 [3/7] RUN apt-get update && apt-get install -y apt-utils curl git git-core bsdmainutils python3
+#7 10.43 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#7 10.77 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+#7 10.92 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#7 11.32 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8906 kB]
+#7 16.58 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [4952 B]
+#7 16.69 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [58.3 kB]
+#7 18.92 Fetched 9221 kB in 9s (997 kB/s)
+#7 18.92 Reading package lists...
+#7 20.43 Reading package lists...
+#7 21.97 Building dependency tree...
+#7 22.42 Reading state information...
+#7 23.13 git is already the newest version (1:2.39.2-1.1).
+#7 23.13 python3 is already the newest version (3.11.2-1+b1).
+#7 23.13 python3 set to manually installed.
+#7 23.13 The following additional packages will be installed:
+#7 23.14   bsdextrautils libcurl3-gnutls libcurl4 ncal
+#7 23.15 Suggested packages:
+#7 23.15   calendar whois vacation mailutils
+#7 23.26 The following NEW packages will be installed:
+#7 23.26   apt-utils bsdextrautils bsdmainutils ncal
+#7 23.27 The following packages will be upgraded:
+#7 23.27   curl libcurl3-gnutls libcurl4
+#7 23.42 3 upgraded, 4 newly installed, 0 to remove and 8 not upgraded.
+#7 23.42 Need to get 1503 kB of archives.
+#7 23.42 After this operation, 1485 kB of additional disk space will be used.
+#7 23.42 Get:1 http://deb.debian.org/debian bookworm/main amd64 apt-utils amd64 2.6.1 [309 kB]
+#7 23.87 Get:2 http://deb.debian.org/debian bookworm/main amd64 bsdextrautils amd64 2.38.1-5+b1 [86.6 kB]
+#7 24.06 Get:3 http://deb.debian.org/debian bookworm/main amd64 ncal amd64 12.1.8 [19.7 kB]
+#7 24.27 Get:4 http://deb.debian.org/debian bookworm/main amd64 bsdmainutils all 12.1.8 [5952 B]
+#7 24.47 Get:5 http://deb.debian.org/debian-security bookworm-security/main amd64 curl amd64 7.88.1-10+deb12u1 [314 kB]
+#7 24.74 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 libcurl4 amd64 7.88.1-10+deb12u1 [386 kB]
+#7 25.03 Get:7 http://deb.debian.org/debian-security bookworm-security/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u1 [381 kB]
+#7 25.85 debconf: delaying package configuration, since apt-utils is not installed
+#7 25.95 Fetched 1503 kB in 2s (776 kB/s)
+#7 26.03 Selecting previously unselected package apt-utils.
+#7 26.03 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15610 files and directories currently installed.)
+#7 26.24 Preparing to unpack .../0-apt-utils_2.6.1_amd64.deb ...
+#7 26.26 Unpacking apt-utils (2.6.1) ...
+#7 26.59 Selecting previously unselected package bsdextrautils.
+#7 26.60 Preparing to unpack .../1-bsdextrautils_2.38.1-5+b1_amd64.deb ...
+#7 26.62 Unpacking bsdextrautils (2.38.1-5+b1) ...
+#7 26.79 Selecting previously unselected package ncal.
+#7 26.79 Preparing to unpack .../2-ncal_12.1.8_amd64.deb ...
+#7 26.81 Unpacking ncal (12.1.8) ...
+#7 26.96 Selecting previously unselected package bsdmainutils.
+#7 26.97 Preparing to unpack .../3-bsdmainutils_12.1.8_all.deb ...
+#7 26.99 Unpacking bsdmainutils (12.1.8) ...
+#7 27.10 Preparing to unpack .../4-curl_7.88.1-10+deb12u1_amd64.deb ...
+#7 27.15 Unpacking curl (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 27.38 Preparing to unpack .../5-libcurl4_7.88.1-10+deb12u1_amd64.deb ...
+#7 27.44 Unpacking libcurl4:amd64 (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 27.72 Preparing to unpack .../6-libcurl3-gnutls_7.88.1-10+deb12u1_amd64.deb ...
+#7 27.77 Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 28.05 Setting up apt-utils (2.6.1) ...
+#7 28.10 Setting up bsdextrautils (2.38.1-5+b1) ...
+#7 28.15 Setting up ncal (12.1.8) ...
+#7 28.20 Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u1) ...
+#7 28.26 Setting up bsdmainutils (12.1.8) ...
+#7 28.31 Setting up libcurl4:amd64 (7.88.1-10+deb12u1) ...
+#7 28.36 Setting up curl (7.88.1-10+deb12u1) ...
+#7 28.42 Processing triggers for libc-bin (2.36-9) ...
+#7 DONE 28.9s
+
+#8 [4/7] COPY . /tmp
+#8 DONE 0.2s
+
+#9 [5/7] RUN /tmp/images/algod/install.sh     -d "/node"     -c "stable"     -u ""     -b ""     -s ""
+#9 0.677 /tmp/images/algod /go
+#9 0.678 Installing algod with options:
+#9 0.678   BINDIR = /node
+#9 0.678   CHANNEL = stable
+#9 0.678   URL = 
+#9 0.678   BRANCH = 
+#9 0.678   SHA = 
+#9 0.708 Current Version = 0
+#9 8.280 updater binary was installed at /tmp/images/algod/updater
+#9 9.297 Latest Version = 12886016000
+#9 9.297 New version found
+#9 9.330 Checking for files matching: 'channel/stable/node_stable_linux-amd64_' in bucket algorand-releases
+#9 93.16 Update Downloaded to /tmp/tmp.gKV7MR6PVz/12886016000.tar.gz
+#9 93.16 Expanding update...
+#9 111.6 Validating update...
+#9 111.6 Starting the new update script to complete the installation...
+#9 111.6 ... Resuming installation from the latest update script
+#9 111.7 Current Version = 0
+#9 111.7 Backing up current binary files...
+#9 111.7 Backing up current data files from /node/data...
+#9 111.7 Installing new binary files into /node
+#9 124.9 Installing new data files into /node/data...
+#9 124.9 Copying genesis files locally
+#9 125.0 Checking for new ledger in /node/data
+#9 126.3 Cannot read genesis file /node/data/genesis.json: open /node/data/genesis.json: no such file or directory
+#9 126.3 Updating genesis files for default network
+#9 126.6 New genesis ID, resetting wallets
+#9 126.6 New Ledger - restoring genesis accounts in /node/data
+#9 126.6 New Ledger - importing rootkeys for genesis accounts
+#9 127.1 Imported 0 keys
+#9 127.1 Applying migration fixups...
+#9 127.1 Deleting existing log files in /node/data
+#9 127.1 Install complete - restart node manually
+#9 DONE 128.2s
+
+#10 [6/7] RUN sed -i   -e "s/NETWORK_NUM_ROUNDS/30000/"   -e "s/ALGOD_FOLLOWER_PORT/3999/"   "//tmp/images/algod/DevModeNetwork.json" &&  /tmp/images/algod/setup.py  --bin-dir "/node"  --data-dir "/opt/data"  --start-script "/opt/start_algod.sh"  --network-dir "/opt/testnetwork"  --network-template "//tmp/images/algod/DevModeNetwork.json"  --network-token "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"  --algod-port "4001"  --kmd-port "4002"  --bootstrap-url ""  --genesis-file "/tmp/"  --archival ""
+#10 2.105 Created new rootkey: /opt/testnetwork/Wallet1.rootkey
+#10 2.142 Created new rootkey: /opt/testnetwork/Wallet3.rootkey
+#10 2.148 Created new rootkey: /opt/testnetwork/Wallet2.rootkey
+#10 2.149 Generating Wallet1's keys for a period of 30000 rounds
+#10 2.223 Generating Wallet3's keys for a period of 30000 rounds
+#10 2.223 Generating Wallet2's keys for a period of 30000 rounds
+#10 10.18 participation key generation for Wallet1 completed successfully
+#10 10.25 participation key generation for Wallet2 completed successfully
+#10 10.48 participation key generation for Wallet3 completed successfully
+#10 10.51 https://github.com/algorandfoundation/specs/tree/abd3d4823c6f77349fc04c3af7b1e99fe4df699f 100000
+#10 10.51 Created 3 new rootkeys and 3 new partkeys in 8.468277861s.
+#10 10.51 NOTICE: Participation keys are valid for a period of 30000 rounds. After this many rounds the network will stall unless new keys are registered.
+#10 15.61 Network sandnet created under /opt/testnetwork
+#10 15.63 Configuring network with the following arguments:
+#10 15.63 {   'algod_port': '4001',
+#10 15.63     'archival': False,
+#10 15.63     'bin_dir': '/node',
+#10 15.63     'bootstrap_url': '',
+#10 15.63     'data_dir': '/opt/data',
+#10 15.63     'genesis_file': '/tmp/',
+#10 15.63     'kmd_port': '4002',
+#10 15.63     'network_dir': '/opt/testnetwork',
+#10 15.63     'network_template': '//tmp/images/algod/DevModeNetwork.json',
+#10 15.63     'network_token': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+#10 15.63     'start_script': '/opt/start_algod.sh'}
+#10 15.63 Creating a private network.
+#10 15.63 Start commands for /opt/start_algod.sh:
+#10 15.63 ("startCommands=['/node/goal network start -r /opt/testnetwork', '/node/kmd "
+#10 15.63  "start -t 0 -d /opt/testnetwork/Node/kmd-v0.5']")
+#10 15.63 Finished preparing start script '/opt/start_algod.sh' under /opt/
+#10 15.63 Creating symlink /opt/data -> /opt/testnetwork/Node
+#10 15.63 writing to node_config_path=[/opt/testnetwork/Node/config.json] config json: { "Version": 27, "GossipFanout": 1, "EndpointAddress": "0.0.0.0:4001", "Archival":false, "EnableDeveloperAPI":true, "NetAddress": "127.0.0.1:0", "DNSBootstrapID": "", "EnableTxnEvalTracer": true, "MaxAcctLookback": 256}
+#10 15.63 writing to kmd_config_path=[/opt/testnetwork/Node/kmd-v0.5/kmd_config.json] config json: { "address":"0.0.0.0:4002",  "allowed_origins":["*"] }
+#10 DONE 15.8s
+
+#11 [7/7] WORKDIR /opt/data
+#11 DONE 0.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 3.9s done
+#12 writing image sha256:0f75a6d44caddb9c5ce3d8f05c3e4db00fff1de9144a830ed5650e0207082028 0.0s done
+#12 naming to docker.io/library/sandbox-algod 0.0s done
+#12 DONE 3.9s
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 565B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 34B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/golang:1.20.5-alpine
+#3 DONE 2.7s
+
+#4 [1/7] FROM docker.io/library/golang:1.20.5-alpine@sha256:fd9d9d7194ec40a9a6ae89fcaef3e47c47de7746dd5848ab5343695dbbd09f8c
+#4 DONE 0.0s
+
+#5 [2/7] WORKDIR /opt/conduit
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 196B 0.0s done
+#6 DONE 0.1s
+
+#7 [3/7] RUN apk add --no-cache git make bash
+#7 0.953 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+#7 1.840 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+#7 2.940 (1/13) Installing ncurses-terminfo-base (6.4_p20230506-r0)
+#7 3.023 (2/13) Installing libncursesw (6.4_p20230506-r0)
+#7 3.134 (3/13) Installing readline (8.2.1-r1)
+#7 3.214 (4/13) Installing bash (5.2.15-r5)
+#7 3.440 Executing bash-5.2.15-r5.post-install
+#7 3.451 (5/13) Installing brotli-libs (1.0.9-r14)
+#7 3.651 (6/13) Installing libunistring (1.1-r1)
+#7 3.983 (7/13) Installing libidn2 (2.3.4-r1)
+#7 4.058 (8/13) Installing nghttp2-libs (1.55.1-r0)
+#7 4.107 (9/13) Installing libcurl (8.2.1-r0)
+#7 4.239 (10/13) Installing libexpat (2.5.0-r1)
+#7 4.289 (11/13) Installing pcre2 (10.42-r1)
+#7 4.401 (12/13) Installing git (2.40.1-r0)
+#7 6.019 (13/13) Installing make (4.4.1-r1)
+#7 6.203 Executing busybox-1.36.1-r0.trigger
+#7 6.301 OK: 20 MiB in 29 packages
+#7 DONE 6.8s
+
+#8 [4/7] COPY images/conduit/disabled.go /tmp/disabled.go
+#8 DONE 0.2s
+
+#9 [5/7] COPY images/conduit/start.sh /tmp/start.sh
+#9 DONE 0.1s
+
+#10 [6/7] COPY images/conduit/install.sh /tmp/install.sh
+#10 DONE 0.2s
+
+#11 [7/7] RUN /tmp/install.sh
+#11 0.819 install.sh: starting conduit image install
+#11 0.825 Cloning into '/opt/conduit'...
+#11 2.707 go: downloading github.com/spf13/cobra v1.7.0
+#11 2.710 go: downloading github.com/sirupsen/logrus v1.9.3
+#11 2.843 go: downloading github.com/algorand/go-algorand-sdk/v2 v2.2.0
+#11 2.860 go: downloading github.com/prometheus/client_golang v1.11.1
+#11 2.930 go: downloading gopkg.in/yaml.v3 v3.0.1
+#11 3.124 go: downloading github.com/yuin/goldmark v1.5.4
+#11 4.025 go: downloading github.com/algorand/go-codec/codec v1.1.10
+#11 4.246 go: downloading github.com/algorand/indexer/v3 v3.0.0
+#11 4.337 go: downloading github.com/google/uuid v1.3.0
+#11 4.361 go: downloading github.com/opensearch-project/opensearch-go/v2 v2.3.0
+#11 5.708 go: downloading golang.org/x/sys v0.10.0
+#11 5.917 go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.2
+#11 6.121 go: downloading github.com/spf13/pflag v1.0.5
+#11 6.750 go: downloading github.com/prometheus/client_model v0.4.0
+#11 6.755 go: downloading github.com/prometheus/common v0.32.1
+#11 6.756 go: downloading github.com/beorn7/perks v1.0.1
+#11 6.806 go: downloading github.com/cespare/xxhash/v2 v2.2.0
+#11 6.845 go: downloading github.com/golang/protobuf v1.5.3
+#11 7.032 go: downloading github.com/prometheus/procfs v0.11.0
+#11 7.189 go: downloading golang.org/x/crypto v0.11.0
+#11 7.195 go: downloading github.com/google/go-querystring v1.0.0
+#11 7.525 go: downloading github.com/jackc/pgconn v1.10.0
+#11 7.578 go: downloading github.com/jackc/pgerrcode v0.0.0-20201024163028-a0d42d470451
+#11 7.593 go: downloading github.com/jackc/pgx/v4 v4.13.0
+#11 8.072 go: downloading github.com/pmezard/go-difflib v1.0.0
+#11 8.073 go: downloading github.com/davecgh/go-spew v1.1.1
+#11 8.122 go: downloading github.com/russross/blackfriday/v2 v2.1.0
+#11 8.131 go: downloading google.golang.org/protobuf v1.31.0
+#11 8.829 go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.4
+#11 9.382 go: downloading github.com/algorand/oapi-codegen v1.12.0-algorand.0
+#11 9.384 go: downloading github.com/getkin/kin-openapi v0.107.0
+#11 9.384 go: downloading github.com/labstack/echo/v4 v4.9.1
+#11 9.384 go: downloading github.com/algorand/avm-abi v0.2.0
+#11 9.392 go: downloading github.com/jackc/chunkreader/v2 v2.0.1
+#11 9.399 go: downloading github.com/jackc/pgio v1.0.0
+#11 9.410 go: downloading github.com/jackc/pgpassfile v1.0.0
+#11 9.508 go: downloading github.com/jackc/pgproto3/v2 v2.1.1
+#11 9.979 go: downloading github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b
+#11 10.01 go: downloading golang.org/x/text v0.11.0
+#11 10.04 go: downloading github.com/jackc/puddle v1.1.3
+#11 10.06 go: downloading github.com/jackc/pgtype v1.8.1
+#11 10.17 go: downloading github.com/labstack/gommon v0.4.0
+#11 11.17 go: downloading golang.org/x/net v0.12.0
+#11 12.15 go: downloading github.com/go-openapi/jsonpointer v0.19.6
+#11 13.11 go: downloading github.com/invopop/yaml v0.1.0
+#11 13.73 go: downloading github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
+#11 13.84 go: downloading github.com/apapsch/go-jsonmerge/v2 v2.0.0
+#11 15.06 go: downloading github.com/mattn/go-colorable v0.1.13
+#11 15.14 go: downloading github.com/mattn/go-isatty v0.0.19
+#11 15.19 go: downloading github.com/valyala/fasttemplate v1.2.1
+#11 15.19 go: downloading github.com/go-openapi/swag v0.22.3
+#11 15.60 go: downloading github.com/valyala/bytebufferpool v1.0.0
+#11 15.63 go: downloading github.com/mailru/easyjson v0.7.7
+#11 15.90 go: downloading github.com/josharian/intern v1.0.0
+#11 19.39 go generate ./... && cd cmd/conduit && go build -ldflags='-X github.com/algorand/conduit/version.Hash=0752d23bc0b9eab1a437c2fd7b2111b3a55b9a30 -X github.com/algorand/conduit/version.ShortHash=0752d23 -X github.com/algorand/conduit/version.CompileTime=2023-09-06T23:21:52+0000 -X "github.com/algorand/conduit/version.ReleaseVersion=Dev Build"'
+#11 131.0 install.sh: seconds it took to get to finish conduit image install: 130s
+#11 DONE 131.8s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 12.3s done
+#12 writing image sha256:6547b9c78c7cf0ba8a557803fdde8b41e6d99e52044bb20d549861e6777ee5b3 0.0s done
+#12 naming to docker.io/library/sandbox-conduit 0.0s done
+#12 DONE 12.4s
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 32B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load .dockerignore
+#2 transferring context:
+#2 transferring context: 34B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/golang:1.20.5-alpine
+#3 DONE 1.4s
+
+#4 [1/7] FROM docker.io/library/golang:1.20.5-alpine@sha256:fd9d9d7194ec40a9a6ae89fcaef3e47c47de7746dd5848ab5343695dbbd09f8c
+#4 DONE 0.0s
+
+#5 [2/7] WORKDIR /opt/conduit
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 196B 0.0s done
+#6 DONE 0.1s
+
+#7 [3/7] RUN apk add --no-cache git make bash
+#7 2.065 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+#7 3.076 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+#7 4.056 (1/13) Installing ncurses-terminfo-base (6.4_p20230506-r0)
+#7 4.113 (2/13) Installing libncursesw (6.4_p20230506-r0)
+#7 4.213 (3/13) Installing readline (8.2.1-r1)
+#7 4.316 (4/13) Installing bash (5.2.15-r5)
+#7 4.526 Executing bash-5.2.15-r5.post-install
+#7 4.535 (5/13) Installing brotli-libs (1.0.9-r14)
+#7 4.695 (6/13) Installing libunistring (1.1-r1)
+#7 5.030 (7/13) Installing libidn2 (2.3.4-r1)
+#7 5.126 (8/13) Installing nghttp2-libs (1.55.1-r0)
+#7 5.187 (9/13) Installing libcurl (8.2.1-r0)
+#7 5.343 (10/13) Installing libexpat (2.5.0-r1)
+#7 5.403 (11/13) Installing pcre2 (10.42-r1)
+#7 5.544 (12/13) Installing git (2.40.1-r0)
+#7 6.828 (13/13) Installing make (4.4.1-r1)
+#7 6.908 Executing busybox-1.36.1-r0.trigger
+#7 6.938 OK: 20 MiB in 29 packages
+#7 DONE 7.4s
+
+#8 [4/7] COPY images/conduit/disabled.go /tmp/disabled.go
+#8 DONE 0.2s
+
+#9 [5/7] COPY images/conduit/start.sh /tmp/start.sh
+#9 DONE 0.2s
+
+#10 [6/7] COPY images/conduit/install.sh /tmp/install.sh
+#10 DONE 0.1s
+
+#11 [7/7] RUN /tmp/install.sh
+#11 0.707 install.sh: starting conduit image install
+#11 0.710 Cloning into '/opt/conduit'...
+#11 6.173 make: /opt/conduit/mule/scripts/ostype.sh: No such file or directory
+#11 6.314 go: downloading github.com/algorand/go-algorand-sdk/v2 v2.2.0
+#11 6.525 go: downloading github.com/getkin/kin-openapi v0.107.0
+#11 6.530 go: downloading github.com/labstack/echo/v4 v4.9.1
+#11 6.551 go: downloading github.com/sirupsen/logrus v1.8.1
+#11 6.564 go: downloading github.com/spf13/cobra v1.3.0
+#11 6.625 go: downloading github.com/spf13/pflag v1.0.5
+#11 7.854 go: downloading github.com/spf13/viper v1.10.0
+#11 8.114 go: downloading github.com/stretchr/testify v1.8.2
+#11 8.118 go: downloading github.com/jackc/pgx/v4 v4.13.0
+#11 8.135 go: downloading github.com/algorand/go-codec/codec v1.1.10
+#11 8.553 go: downloading github.com/orlangure/gnomock v0.28.0
+#11 8.778 go: downloading github.com/jackc/pgconn v1.10.0
+#11 8.782 go: downloading github.com/jackc/pgerrcode v0.0.0-20201024163028-a0d42d470451
+#11 8.786 go: downloading github.com/algorand/avm-abi v0.2.0
+#11 8.796 go: downloading github.com/labstack/echo-contrib v0.11.0
+#11 8.806 go: downloading gopkg.in/yaml.v3 v3.0.1
+#11 9.142 go: downloading github.com/prometheus/client_golang v1.11.1
+#11 9.266 go: downloading github.com/davecgh/go-spew v1.1.1
+#11 9.272 go: downloading github.com/pmezard/go-difflib v1.0.0
+#11 9.481 go: downloading github.com/algorand/oapi-codegen v1.12.0-algorand.0
+#11 9.730 go: downloading golang.org/x/sys v0.6.0
+#11 9.761 go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.1
+#11 9.761 go: downloading gopkg.in/yaml.v2 v2.4.0
+#11 10.08 go: downloading github.com/go-openapi/jsonpointer v0.19.6
+#11 10.58 go: downloading github.com/invopop/yaml v0.1.0
+#11 10.58 go: downloading github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
+#11 10.63 go: downloading github.com/fsnotify/fsnotify v1.5.1
+#11 10.64 go: downloading github.com/magiconair/properties v1.8.5
+#11 10.65 go: downloading github.com/mitchellh/mapstructure v1.5.0
+#11 10.66 go: downloading github.com/spf13/afero v1.6.0
+#11 10.67 go: downloading github.com/spf13/cast v1.4.1
+#11 10.67 go: downloading github.com/spf13/jwalterweatherman v1.1.0
+#11 10.75 go: downloading github.com/subosito/gotenv v1.2.0
+#11 10.77 go: downloading gopkg.in/ini.v1 v1.66.2
+#11 10.78 go: downloading github.com/labstack/gommon v0.4.0
+#11 10.93 go: downloading golang.org/x/crypto v0.6.0
+#11 11.78 go: downloading golang.org/x/net v0.8.0
+#11 11.78 go: downloading github.com/stretchr/objx v0.5.0
+#11 11.79 go: downloading github.com/jackc/pgio v1.0.0
+#11 11.80 go: downloading github.com/jackc/pgproto3/v2 v2.1.1
+#11 12.66 go: downloading github.com/jackc/pgtype v1.8.1
+#11 12.68 go: downloading github.com/jackc/puddle v1.1.3
+#11 12.68 go: downloading github.com/golang-jwt/jwt v3.2.2+incompatible
+#11 12.68 go: downloading github.com/valyala/fasttemplate v1.2.1
+#11 12.89 go: downloading golang.org/x/time v0.0.0-20220411224347-583f2d630306
+#11 13.01 go: downloading github.com/jackc/chunkreader/v2 v2.0.1
+#11 13.02 go: downloading github.com/jackc/pgpassfile v1.0.0
+#11 13.02 go: downloading github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b
+#11 13.04 go: downloading golang.org/x/text v0.8.0
+#11 14.24 go: downloading github.com/prometheus/common v0.26.0
+#11 14.26 go: downloading github.com/beorn7/perks v1.0.1
+#11 14.27 go: downloading github.com/cespare/xxhash/v2 v2.1.2
+#11 14.27 go: downloading github.com/golang/protobuf v1.5.3
+#11 15.09 go: downloading github.com/prometheus/client_model v0.2.0
+#11 16.61 go: downloading github.com/prometheus/procfs v0.6.0
+#11 16.64 go: downloading github.com/apapsch/go-jsonmerge/v2 v2.0.0
+#11 16.64 go: downloading github.com/docker/docker v23.0.4+incompatible
+#11 19.26 go: downloading github.com/docker/go-connections v0.4.0
+#11 19.37 go: downloading github.com/google/uuid v1.3.0
+#11 19.46 go: downloading go.uber.org/zap v1.24.0
+#11 19.79 go: downloading golang.org/x/sync v0.1.0
+#11 19.89 go: downloading github.com/lib/pq v1.10.8
+#11 20.14 go: downloading github.com/russross/blackfriday/v2 v2.1.0
+#11 20.29 go: downloading github.com/go-openapi/swag v0.22.3
+#11 20.49 go: downloading github.com/hashicorp/hcl v1.0.0
+#11 20.73 go: downloading github.com/pelletier/go-toml v1.9.4
+#11 21.00 go: downloading github.com/mattn/go-colorable v0.1.12
+#11 21.16 go: downloading github.com/mattn/go-isatty v0.0.14
+#11 21.30 go: downloading github.com/valyala/bytebufferpool v1.0.0
+#11 21.38 go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.1
+#11 21.48 go: downloading google.golang.org/protobuf v1.28.1
+#11 22.94 go: downloading go.uber.org/atomic v1.9.0
+#11 22.94 go: downloading go.uber.org/multierr v1.7.0
+#11 22.94 go: downloading github.com/mailru/easyjson v0.7.7
+#11 22.95 go: downloading github.com/docker/go-units v0.4.0
+#11 22.96 go: downloading github.com/opencontainers/image-spec v1.0.2
+#11 22.97 go: downloading github.com/pkg/errors v0.9.1
+#11 23.01 go: downloading github.com/docker/distribution v2.8.0+incompatible
+#11 23.42 go: downloading github.com/opencontainers/go-digest v1.0.0
+#11 23.42 go: downloading github.com/josharian/intern v1.0.0
+#11 23.42 go: downloading github.com/gogo/protobuf v1.3.2
+#11 26.28 cd cmd/algorand-indexer && go build -ldflags='-X github.com/algorand/indexer/v3/version.Hash=d9c41d9f63b75c2a2dafe52199df9ae7055e75fd -X github.com/algorand/indexer/v3/version.CompileTime=2023-09-06T23:24:36+0000 -X "github.com/algorand/indexer/v3/version.ReleaseVersion=Dev Build"'
+#11 103.5 go install github.com/vektra/mockery/v2@v2.20.0
+#11 104.4 go: downloading github.com/vektra/mockery/v2 v2.20.0
+#11 106.2 go: downloading github.com/chigopher/pathlib v0.12.0
+#11 106.2 go: downloading github.com/rs/zerolog v1.27.0
+#11 106.2 go: downloading github.com/mitchellh/go-homedir v1.1.0
+#11 106.2 go: downloading github.com/spf13/cobra v1.4.0
+#11 106.2 go: downloading golang.org/x/crypto v0.0.0-20220525230936-793ad666bf5e
+#11 106.2 go: downloading github.com/spf13/viper v1.12.0
+#11 106.3 go: downloading golang.org/x/tools v0.5.0
+#11 108.7 go: downloading github.com/spf13/afero v1.8.2
+#11 108.7 go: downloading golang.org/x/term v0.0.0-20220526004731-065cf7ba2467
+#11 108.7 go: downloading github.com/fsnotify/fsnotify v1.5.4
+#11 108.8 go: downloading github.com/spf13/cast v1.5.0
+#11 109.2 go: downloading github.com/subosito/gotenv v1.4.0
+#11 109.3 go: downloading gopkg.in/ini.v1 v1.66.6
+#11 109.3 go: downloading github.com/magiconair/properties v1.8.6
+#11 109.3 go: downloading github.com/pelletier/go-toml/v2 v2.0.2
+#11 109.5 go: downloading golang.org/x/sys v0.4.0
+#11 109.7 go: downloading golang.org/x/text v0.3.7
+#11 110.6 go: downloading github.com/pelletier/go-toml v1.9.5
+#11 114.1 go: downloading golang.org/x/mod v0.7.0
+#11 131.9 cd idb && mockery --name=IndexerDb
+#11 131.9 06 Sep 23 23:26 UTC INF Starting mockery dry-run=false version=v2.20.0
+#11 131.9 06 Sep 23 23:26 UTC INF Using config:  dry-run=false version=v2.20.0
+#11 131.9 06 Sep 23 23:26 UTC INF Walking dry-run=false version=v2.20.0
+#11 132.6 06 Sep 23 23:26 UTC INF Generating mock dry-run=false interface=IndexerDb qualified-name=github.com/algorand/indexer/v3/idb version=v2.20.0
+#11 132.6 cp: can't stat 'cmd/conduit/conduit': No such file or directory
+#11 ERROR: executor failed running [/bin/sh -c /tmp/install.sh]: exit code: 1
+------
+ > [7/7] RUN /tmp/install.sh:
+#11 109.5 go: downloading golang.org/x/sys v0.4.0
+#11 109.7 go: downloading golang.org/x/text v0.3.7
+#11 110.6 go: downloading github.com/pelletier/go-toml v1.9.5
+#11 114.1 go: downloading golang.org/x/mod v0.7.0
+#11 131.9 cd idb && mockery --name=IndexerDb
+#11 131.9 06 Sep 23 23:26 UTC INF Starting mockery dry-run=false version=v2.20.0
+#11 131.9 06 Sep 23 23:26 UTC INF Using config:  dry-run=false version=v2.20.0
+#11 131.9 06 Sep 23 23:26 UTC INF Walking dry-run=false version=v2.20.0
+#11 132.6 06 Sep 23 23:26 UTC INF Generating mock dry-run=false interface=IndexerDb qualified-name=github.com/algorand/indexer/v3/idb version=v2.20.0
+#11 132.6 cp: can't stat 'cmd/conduit/conduit': No such file or directory
+------
+failed to solve: executor failed running [/bin/sh -c /tmp/install.sh]: exit code: 1
+* docker compose up -d
+Network sandbox_default  Creating
+Network sandbox_default  Created
+Container algorand-sandbox-algod  Creating
+Container algorand-sandbox-postgres  Creating
+Container algorand-sandbox-algod  Created
+Container algorand-sandbox-postgres  Created
+Container algorand-sandbox-conduit  Creating
+Container algorand-sandbox-conduit  Created
+Container algorand-sandbox-indexer  Creating
+Container algorand-sandbox-indexer  Created
+Container algorand-sandbox-algod  Starting
+Container algorand-sandbox-postgres  Starting
+Container algorand-sandbox-algod  Started
+Container algorand-sandbox-postgres  Started
+Container algorand-sandbox-conduit  Starting
+Container algorand-sandbox-conduit  Started
+Container algorand-sandbox-indexer  Starting
+Container algorand-sandbox-indexer  Started
+.clean file NOT FOUND. Sandbox images will NOT be rebuilt.
+* docker compose up -d
+Container algorand-sandbox-postgres  Created
+Container algorand-sandbox-algod  Recreate
+Container algorand-sandbox-algod  Recreated
+Container algorand-sandbox-conduit  Recreate
+Container algorand-sandbox-conduit  Recreated
+Container algorand-sandbox-indexer  Recreate
+Container algorand-sandbox-indexer  Recreated
+Container algorand-sandbox-postgres  Starting
+Container algorand-sandbox-algod  Starting
+Container algorand-sandbox-postgres  Started
+Container algorand-sandbox-algod  Started
+Container algorand-sandbox-conduit  Starting
+Container algorand-sandbox-conduit  Started
+Container algorand-sandbox-indexer  Starting
+Container algorand-sandbox-indexer  Started
+.clean file NOT FOUND. Sandbox images will NOT be rebuilt.
+* docker compose up -d
+ Container algorand-sandbox-postgres  Recreate
+ Container algorand-sandbox-algod  Recreate
+ Container algorand-sandbox-postgres  Recreated
+ Container algorand-sandbox-algod  Recreated
+ Container algorand-sandbox-conduit  Recreate
+ Container algorand-sandbox-conduit  Recreated
+ Container algorand-sandbox-indexer  Recreate
+ Container algorand-sandbox-indexer  Recreated
+ Container algorand-sandbox-algod  Starting
+ Container algorand-sandbox-postgres  Starting
+ Container algorand-sandbox-postgres  Started
+ Container algorand-sandbox-algod  Started
+ Container algorand-sandbox-conduit  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint algorand-sandbox-conduit (e6ffb52d3a98927e2cd3cc306dc451724b0e2a583b9cbc5b38b0338933376c2f): Bind for 0.0.0.0:3998 failed: port is already allocated
+* docker compose down
+ Container algorand-sandbox-indexer  Stopping
+ Container algorand-sandbox-indexer  Stopped
+ Container algorand-sandbox-indexer  Removing
+ Container algorand-sandbox-indexer  Removed
+ Container algorand-sandbox-conduit  Stopping
+ Container algorand-sandbox-conduit  Stopped
+ Container algorand-sandbox-conduit  Removing
+ Container algorand-sandbox-conduit  Removed
+ Container algorand-sandbox-postgres  Stopping
+ Container algorand-sandbox-algod  Stopping
+ Container algorand-sandbox-algod  Stopped
+ Container algorand-sandbox-algod  Removing
+ Container algorand-sandbox-postgres  Stopped
+ Container algorand-sandbox-postgres  Removing
+ Container algorand-sandbox-postgres  Removed
+ Container algorand-sandbox-algod  Removed
+ Network sandbox_default  Removing
+ Network sandbox_default  Removed
+* docker rmi sandbox_algod sandbox_indexer
+Error response from daemon: No such image: sandbox_algod:latest
+Error response from daemon: No such image: sandbox_indexer:latest
+* docker compose rm -f
+No stopped containers
+* docker rmi dbbc730efa9e
+e8fa18a990f2
+Deleted: sha256:dbbc730efa9edb8042a59955b1d5532b705f66c32b63c2fa6b6646fcac68f617
+Deleted: sha256:e8fa18a990f22665999f80fadc4ee0d2aa68c9d26644d5fd803abe88cd7b5a95
+.clean file found in sandbox directory. Rebuilding images...
+* docker compose build --no-cache --progress plain
+--progress is a global compose flag, better use `docker compose --progress xx build ...#0 building with "default" instance using docker driver
+
+#1 [algod internal] load build definition from Dockerfile
+#1 ...
+
+#2 [algod internal] load .dockerignore
+#2 transferring context: 73B 0.0s done
+#2 DONE 0.2s
+
+#1 [algod internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.59kB done
+#1 DONE 0.2s
+
+#3 [algod internal] load metadata for docker.io/library/golang:1.20.5
+#3 DONE 2.5s
+
+#4 [algod 1/7] FROM docker.io/library/golang:1.20.5@sha256:fd9306e1c664bd49a11d4a4a04e41303430e069e437d137876e9290a555e06fb
+#4 resolve docker.io/library/golang:1.20.5@sha256:fd9306e1c664bd49a11d4a4a04e41303430e069e437d137876e9290a555e06fb 0.1s done
+#4 sha256:7f2cf491a0d8c1afcdc55120cda9d3777ee98852eff619c6c3e5a0b2386a69b4 1.58kB / 1.58kB done
+#4 sha256:d5a118f29bfadd6529ee8da6b1261fab7d0d80de3bb9b496ee6a189a21f17029 6.86kB / 6.86kB done
+#4 sha256:fd9306e1c664bd49a11d4a4a04e41303430e069e437d137876e9290a555e06fb 2.36kB / 2.36kB done
+#4 DONE 0.3s
+
+#5 [algod internal] load build context
+#5 transferring context: 122.35kB 0.0s done
+#5 DONE 0.1s
+
+#6 [algod 2/7] RUN echo "Installing from source.  -- "
+#6 0.647 Installing from source.  -- 
+#6 DONE 0.7s
+
+#7 [algod 3/7] RUN apt-get update && apt-get install -y apt-utils curl git git-core bsdmainutils python3
+#7 0.808 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#7 0.937 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+#7 1.027 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#7 1.144 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8906 kB]
+#7 3.928 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [4952 B]
+#7 3.985 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [61.6 kB]
+#7 4.963 Fetched 9224 kB in 4s (2151 kB/s)
+#7 4.963 Reading package lists...
+#7 5.674 Reading package lists...
+#7 6.302 Building dependency tree...
+#7 6.479 Reading state information...
+#7 6.796 git is already the newest version (1:2.39.2-1.1).
+#7 6.796 python3 is already the newest version (3.11.2-1+b1).
+#7 6.796 python3 set to manually installed.
+#7 6.796 The following additional packages will be installed:
+#7 6.799   bsdextrautils libcurl3-gnutls libcurl4 ncal
+#7 6.804 Suggested packages:
+#7 6.804   calendar whois vacation mailutils
+#7 6.848 The following NEW packages will be installed:
+#7 6.851   apt-utils bsdextrautils bsdmainutils ncal
+#7 6.853 The following packages will be upgraded:
+#7 6.856   curl libcurl3-gnutls libcurl4
+#7 6.935 3 upgraded, 4 newly installed, 0 to remove and 8 not upgraded.
+#7 6.935 Need to get 1503 kB of archives.
+#7 6.935 After this operation, 1485 kB of additional disk space will be used.
+#7 6.935 Get:1 http://deb.debian.org/debian bookworm/main amd64 apt-utils amd64 2.6.1 [309 kB]
+#7 7.229 Get:2 http://deb.debian.org/debian bookworm/main amd64 bsdextrautils amd64 2.38.1-5+b1 [86.6 kB]
+#7 7.349 Get:3 http://deb.debian.org/debian bookworm/main amd64 ncal amd64 12.1.8 [19.7 kB]
+#7 7.416 Get:4 http://deb.debian.org/debian bookworm/main amd64 bsdmainutils all 12.1.8 [5952 B]
+#7 7.489 Get:5 http://deb.debian.org/debian-security bookworm-security/main amd64 curl amd64 7.88.1-10+deb12u1 [314 kB]
+#7 7.694 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 libcurl4 amd64 7.88.1-10+deb12u1 [386 kB]
+#7 7.958 Get:7 http://deb.debian.org/debian-security bookworm-security/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u1 [381 kB]
+#7 8.429 debconf: delaying package configuration, since apt-utils is not installed
+#7 8.485 Fetched 1503 kB in 1s (1198 kB/s)
+#7 8.539 Selecting previously unselected package apt-utils.
+#7 8.539 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15610 files and directories currently installed.)
+#7 8.641 Preparing to unpack .../0-apt-utils_2.6.1_amd64.deb ...
+#7 8.656 Unpacking apt-utils (2.6.1) ...
+#7 8.925 Selecting previously unselected package bsdextrautils.
+#7 8.929 Preparing to unpack .../1-bsdextrautils_2.38.1-5+b1_amd64.deb ...
+#7 8.948 Unpacking bsdextrautils (2.38.1-5+b1) ...
+#7 9.042 Selecting previously unselected package ncal.
+#7 9.046 Preparing to unpack .../2-ncal_12.1.8_amd64.deb ...
+#7 9.059 Unpacking ncal (12.1.8) ...
+#7 9.161 Selecting previously unselected package bsdmainutils.
+#7 9.165 Preparing to unpack .../3-bsdmainutils_12.1.8_all.deb ...
+#7 9.181 Unpacking bsdmainutils (12.1.8) ...
+#7 9.259 Preparing to unpack .../4-curl_7.88.1-10+deb12u1_amd64.deb ...
+#7 9.298 Unpacking curl (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 9.478 Preparing to unpack .../5-libcurl4_7.88.1-10+deb12u1_amd64.deb ...
+#7 9.529 Unpacking libcurl4:amd64 (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 9.708 Preparing to unpack .../6-libcurl3-gnutls_7.88.1-10+deb12u1_amd64.deb ...
+#7 9.746 Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 9.934 Setting up apt-utils (2.6.1) ...
+#7 9.970 Setting up bsdextrautils (2.38.1-5+b1) ...
+#7 10.01 Setting up ncal (12.1.8) ...
+#7 10.04 Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u1) ...
+#7 10.08 Setting up bsdmainutils (12.1.8) ...
+#7 10.12 Setting up libcurl4:amd64 (7.88.1-10+deb12u1) ...
+#7 10.15 Setting up curl (7.88.1-10+deb12u1) ...
+#7 10.19 Processing triggers for libc-bin (2.36-9) ...
+#7 DONE 10.5s
+
+#8 [algod 4/7] COPY . /tmp
+#8 DONE 0.1s
+
+#9 [algod 5/7] RUN /tmp/images/algod/install.sh     -d "/node"     -c "stable"     -u ""     -b ""     -s ""
+#9 0.663 /tmp/images/algod /go
+#9 0.663 Installing algod with options:
+#9 0.663   BINDIR = /node
+#9 0.663   CHANNEL = stable
+#9 0.663   URL = 
+#9 0.663   BRANCH = 
+#9 0.663   SHA = 
+#9 0.683 Current Version = 0
+#9 6.051 updater binary was installed at /tmp/images/algod/updater
+#9 6.824 Latest Version = 12886081536
+#9 6.824 New version found
+#9 6.841 Checking for files matching: 'channel/stable/node_stable_linux-amd64_' in bucket algorand-releases
+#9 61.13 Update Downloaded to /tmp/tmp.HWegBOFogU/12886081536.tar.gz
+#9 61.13 Expanding update...
+#9 66.80 Validating update...
+#9 66.80 Starting the new update script to complete the installation...
+#9 66.82 ... Resuming installation from the latest update script
+#9 66.83 Current Version = 0
+#9 66.83 Backing up current binary files...
+#9 66.84 Backing up current data files from /node/data...
+#9 66.84 Installing new binary files into /node
+#9 69.34 Installing new data files into /node/data...
+#9 69.35 Copying genesis files locally
+#9 69.36 Checking for new ledger in /node/data
+#9 69.75 Cannot read genesis file /node/data/genesis.json: open /node/data/genesis.json: no such file or directory
+#9 69.76 Updating genesis files for default network
+#9 69.83 New genesis ID, resetting wallets
+#9 69.83 New Ledger - restoring genesis accounts in /node/data
+#9 69.83 New Ledger - importing rootkeys for genesis accounts
+#9 70.00 Imported 0 keys
+#9 70.01 Applying migration fixups...
+#9 70.01 Deleting existing log files in /node/data
+#9 70.02 Install complete - restart node manually
+#9 DONE 70.6s
+
+#10 [algod 6/7] RUN sed -i   -e "s/NETWORK_NUM_ROUNDS/300000/"   -e "s/ALGOD_FOLLOWER_PORT/3999/"   "//tmp/images/algod/template.json" &&  /tmp/images/algod/setup.py  --bin-dir "/node"  --data-dir "/opt/data"  --start-script "/opt/start_algod.sh"  --network-dir "/opt/testnetwork"  --network-template "//tmp/images/algod/template.json"  --network-token "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"  --algod-port "4001"  --kmd-port "4002"  --bootstrap-url ""  --genesis-file "/tmp/"  --archival ""
+#10 0.942 Created new rootkey: /opt/testnetwork/Wallet1.rootkey
+#10 0.976 Created new rootkey: /opt/testnetwork/Wallet2.rootkey
+#10 0.976 Created new rootkey: /opt/testnetwork/Wallet4.rootkey
+#10 0.976 Generating Wallet1's keys for a period of 300000 rounds
+#10 1.025 Created new rootkey: /opt/testnetwork/Wallet3.rootkey
+#10 1.047 Generating Wallet2's keys for a period of 300000 rounds
+#10 39.06 participation key generation for Wallet2 completed successfully
+#10 39.35 participation key generation for Wallet1 completed successfully
+#10 39.36 https://github.com/algorandfoundation/specs/tree/abd3d4823c6f77349fc04c3af7b1e99fe4df699f 100000
+#10 39.36 Created 4 new rootkeys and 2 new partkeys in 38.464409228s.
+#10 39.36 NOTICE: Participation keys are valid for a period of 300000 rounds. After this many rounds the network will stall unless new keys are registered.
+#10 44.86 Network sandnet created under /opt/testnetwork
+#10 44.87 Configuring network with the following arguments:
+#10 44.87 {   'algod_port': '4001',
+#10 44.87     'archival': False,
+#10 44.87     'bin_dir': '/node',
+#10 44.87     'bootstrap_url': '',
+#10 44.87     'data_dir': '/opt/data',
+#10 44.87     'genesis_file': '/tmp/',
+#10 44.87     'kmd_port': '4002',
+#10 44.87     'network_dir': '/opt/testnetwork',
+#10 44.87     'network_template': '//tmp/images/algod/template.json',
+#10 44.87     'network_token': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+#10 44.87     'start_script': '/opt/start_algod.sh'}
+#10 44.87 Creating a private network.
+#10 44.87 Start commands for /opt/start_algod.sh:
+#10 44.87 ("startCommands=['/node/goal network start -r /opt/testnetwork', '/node/kmd "
+#10 44.87  "start -t 0 -d /opt/testnetwork/Node/kmd-v0.5']")
+#10 44.87 Finished preparing start script '/opt/start_algod.sh' under /opt/
+#10 44.87 Creating symlink /opt/data -> /opt/testnetwork/Node
+#10 44.87 writing to node_config_path=[/opt/testnetwork/Node/config.json] config json: { "Version": 27, "GossipFanout": 1, "EndpointAddress": "0.0.0.0:4001", "Archival":false, "EnableDeveloperAPI":true, "NetAddress": "127.0.0.1:0", "DNSBootstrapID": "", "EnableTxnEvalTracer": true, "MaxAcctLookback": 256}
+#10 44.87 writing to kmd_config_path=[/opt/testnetwork/Node/kmd-v0.5/kmd_config.json] config json: { "address":"0.0.0.0:4002",  "allowed_origins":["*"] }
+#10 DONE 45.0s
+
+#11 [algod 7/7] WORKDIR /opt/data
+#11 DONE 0.1s
+
+#12 [algod] exporting to image
+#12 exporting layers
+#12 exporting layers 3.5s done
+#12 writing image sha256:6fd5f30c503e9037258013d04a6a268040ecc60fc2a5c338eec6956cc8a85c4d done
+#12 naming to docker.io/library/sandbox-algod 0.0s done
+#12 DONE 3.5s
+
+#13 [conduit internal] load .dockerignore
+#13 transferring context: 73B 0.0s done
+#13 DONE 0.0s
+
+#14 [conduit internal] load build definition from Dockerfile
+#14 transferring dockerfile: 565B done
+#14 DONE 0.1s
+
+#15 [conduit internal] load metadata for docker.io/library/golang:1.20.5-alpine
+#15 DONE 1.3s
+
+#16 [conduit internal] load build context
+#16 DONE 0.0s
+
+#17 [conduit 1/7] FROM docker.io/library/golang:1.20.5-alpine@sha256:fd9d9d7194ec40a9a6ae89fcaef3e47c47de7746dd5848ab5343695dbbd09f8c
+#17 resolve docker.io/library/golang:1.20.5-alpine@sha256:fd9d9d7194ec40a9a6ae89fcaef3e47c47de7746dd5848ab5343695dbbd09f8c 0.1s done
+#17 ...
+
+#16 [conduit internal] load build context
+#16 transferring context: 196B done
+#16 DONE 0.0s
+
+#17 [conduit 1/7] FROM docker.io/library/golang:1.20.5-alpine@sha256:fd9d9d7194ec40a9a6ae89fcaef3e47c47de7746dd5848ab5343695dbbd09f8c
+#17 sha256:fd9d9d7194ec40a9a6ae89fcaef3e47c47de7746dd5848ab5343695dbbd09f8c 1.65kB / 1.65kB done
+#17 sha256:e7cc33118f807c67d9f2dfc811cc2cc8b79b3687d0b4ac891dd59bb2a5e4a8d3 1.16kB / 1.16kB done
+#17 sha256:9e57a8e8195932a90847f4c081ca57cce48c32cccc98c3dc17ef99f7cb823855 5.11kB / 5.11kB done
+#17 DONE 0.2s
+
+#18 [conduit 2/7] WORKDIR /opt/conduit
+#18 DONE 0.1s
+
+#19 [conduit 3/7] RUN apk add --no-cache git make bash
+#19 0.544 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+#19 1.054 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+#19 1.950 (1/13) Installing ncurses-terminfo-base (6.4_p20230506-r0)
+#19 1.981 (2/13) Installing libncursesw (6.4_p20230506-r0)
+#19 2.038 (3/13) Installing readline (8.2.1-r1)
+#19 2.084 (4/13) Installing bash (5.2.15-r5)
+#19 2.204 Executing bash-5.2.15-r5.post-install
+#19 2.210 (5/13) Installing brotli-libs (1.0.9-r14)
+#19 2.320 (6/13) Installing libunistring (1.1-r1)
+#19 2.500 (7/13) Installing libidn2 (2.3.4-r1)
+#19 2.566 (8/13) Installing nghttp2-libs (1.55.1-r0)
+#19 2.604 (9/13) Installing libcurl (8.2.1-r0)
+#19 2.690 (10/13) Installing libexpat (2.5.0-r1)
+#19 2.723 (11/13) Installing pcre2 (10.42-r1)
+#19 2.804 (12/13) Installing git (2.40.1-r0)
+#19 3.529 (13/13) Installing make (4.4.1-r1)
+#19 3.580 Executing busybox-1.36.1-r0.trigger
+#19 3.601 OK: 20 MiB in 29 packages
+#19 DONE 4.2s
+
+#20 [conduit 4/7] COPY images/conduit/disabled.go /tmp/disabled.go
+#20 DONE 0.2s
+
+#21 [conduit 5/7] COPY images/conduit/start.sh /tmp/start.sh
+#21 DONE 0.1s
+
+#22 [conduit 6/7] COPY images/conduit/install.sh /tmp/install.sh
+#22 DONE 0.2s
+
+#23 [conduit 7/7] RUN /tmp/install.sh
+#23 0.625 install.sh: starting conduit image install
+#23 0.629 Cloning into '/opt/conduit'...
+#23 2.028 go: downloading github.com/prometheus/client_golang v1.11.1
+#23 2.028 go: downloading github.com/yuin/goldmark v1.5.4
+#23 2.092 go: downloading github.com/algorand/go-algorand-sdk/v2 v2.2.0
+#23 2.108 go: downloading github.com/spf13/cobra v1.7.0
+#23 2.126 go: downloading github.com/sirupsen/logrus v1.9.3
+#23 2.172 go: downloading gopkg.in/yaml.v3 v3.0.1
+#23 2.449 go: downloading github.com/algorand/indexer/v3 v3.0.0
+#23 2.781 go: downloading github.com/algorand/go-codec/codec v1.1.10
+#23 3.308 go: downloading github.com/google/uuid v1.3.0
+#23 3.319 go: downloading github.com/opensearch-project/opensearch-go/v2 v2.3.0
+#23 3.682 go: downloading golang.org/x/sys v0.10.0
+#23 3.696 go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.2
+#23 3.725 go: downloading github.com/spf13/pflag v1.0.5
+#23 3.872 go: downloading github.com/beorn7/perks v1.0.1
+#23 3.947 go: downloading github.com/cespare/xxhash/v2 v2.2.0
+#23 4.103 go: downloading github.com/golang/protobuf v1.5.3
+#23 4.198 go: downloading github.com/prometheus/client_model v0.4.0
+#23 4.252 go: downloading github.com/prometheus/common v0.32.1
+#23 4.255 go: downloading github.com/prometheus/procfs v0.11.0
+#23 4.346 go: downloading golang.org/x/crypto v0.11.0
+#23 4.348 go: downloading github.com/google/go-querystring v1.0.0
+#23 4.507 go: downloading github.com/jackc/pgconn v1.10.0
+#23 4.513 go: downloading github.com/jackc/pgerrcode v0.0.0-20201024163028-a0d42d470451
+#23 4.515 go: downloading github.com/davecgh/go-spew v1.1.1
+#23 4.522 go: downloading github.com/jackc/pgx/v4 v4.13.0
+#23 4.962 go: downloading github.com/pmezard/go-difflib v1.0.0
+#23 5.028 go: downloading github.com/russross/blackfriday/v2 v2.1.0
+#23 5.028 go: downloading google.golang.org/protobuf v1.31.0
+#23 5.841 go: downloading github.com/algorand/oapi-codegen v1.12.0-algorand.0
+#23 5.846 go: downloading github.com/getkin/kin-openapi v0.107.0
+#23 5.849 go: downloading github.com/labstack/echo/v4 v4.9.1
+#23 5.857 go: downloading github.com/algorand/avm-abi v0.2.0
+#23 5.858 go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.4
+#23 5.881 go: downloading github.com/jackc/chunkreader/v2 v2.0.1
+#23 5.882 go: downloading github.com/jackc/pgio v1.0.0
+#23 5.910 go: downloading github.com/jackc/pgpassfile v1.0.0
+#23 6.003 go: downloading github.com/jackc/pgproto3/v2 v2.1.1
+#23 6.006 go: downloading github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b
+#23 6.013 go: downloading golang.org/x/text v0.11.0
+#23 6.714 go: downloading github.com/jackc/puddle v1.1.3
+#23 6.715 go: downloading github.com/jackc/pgtype v1.8.1
+#23 6.826 go: downloading github.com/labstack/gommon v0.4.0
+#23 7.256 go: downloading golang.org/x/net v0.12.0
+#23 7.495 go: downloading github.com/go-openapi/jsonpointer v0.19.6
+#23 7.769 go: downloading github.com/invopop/yaml v0.1.0
+#23 7.769 go: downloading github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
+#23 8.122 go: downloading github.com/apapsch/go-jsonmerge/v2 v2.0.0
+#23 8.712 go: downloading github.com/mattn/go-colorable v0.1.13
+#23 8.899 go: downloading github.com/mattn/go-isatty v0.0.19
+#23 8.900 go: downloading github.com/valyala/fasttemplate v1.2.1
+#23 8.968 go: downloading github.com/go-openapi/swag v0.22.3
+#23 9.047 go: downloading github.com/mailru/easyjson v0.7.7
+#23 9.097 go: downloading github.com/valyala/bytebufferpool v1.0.0
+#23 9.159 go: downloading github.com/josharian/intern v1.0.0
+#23 11.10 go generate ./... && cd cmd/conduit && go build -ldflags='-X github.com/algorand/conduit/version.Hash=b7ed6617d822c920f517a68d0635cb11485cec3d -X github.com/algorand/conduit/version.ShortHash=b7ed661 -X github.com/algorand/conduit/version.CompileTime=2023-09-11T20:06:56+0000 -X "github.com/algorand/conduit/version.ReleaseVersion=Dev Build"'
+#23 101.4 install.sh: seconds it took to get to finish conduit image install: 100s
+#23 DONE 111.8s
+
+#24 [conduit] exporting to image
+#24 exporting layers
+#24 exporting layers 99.6s done
+#24 writing image sha256:d5d789a535984d6eca98145675050de1f8f7a656f15c64992da540f8ce44484f
+#24 writing image sha256:d5d789a535984d6eca98145675050de1f8f7a656f15c64992da540f8ce44484f 0.3s done
+#24 naming to docker.io/library/sandbox-conduit
+#24 naming to docker.io/library/sandbox-conduit 0.5s done
+#24 DONE 100.5s
+
+#25 [indexer internal] load build definition from Dockerfile
+#25 transferring dockerfile: 30B 0.0s
+#25 transferring dockerfile: 565B 0.1s done
+#25 DONE 0.5s
+
+#26 [indexer internal] load .dockerignore
+#26 transferring context: 73B 0.1s done
+#26 DONE 1.1s
+
+#15 [indexer internal] load metadata for docker.io/library/golang:1.20.5-alpine
+#15 DONE 4.5s
+
+#17 [indexer 1/7] FROM docker.io/library/golang:1.20.5-alpine@sha256:fd9d9d7194ec40a9a6ae89fcaef3e47c47de7746dd5848ab5343695dbbd09f8c
+#17 CACHED
+
+#27 [indexer internal] load build context
+#27 transferring context: 2.84kB 0.1s done
+#27 DONE 1.3s
+
+#28 [indexer 2/7] WORKDIR /opt/indexer
+#28 DONE 3.6s
+
+#29 [indexer 3/7] RUN apk add --no-cache git make bash
+#29 3.297 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+#29 3.723 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+#29 4.195 (1/13) Installing ncurses-terminfo-base (6.4_p20230506-r0)
+#29 4.264 (2/13) Installing libncursesw (6.4_p20230506-r0)
+#29 4.350 (3/13) Installing readline (8.2.1-r1)
+#29 4.397 (4/13) Installing bash (5.2.15-r5)
+#29 4.534 Executing bash-5.2.15-r5.post-install
+#29 4.538 (5/13) Installing brotli-libs (1.0.9-r14)
+#29 4.630 (6/13) Installing libunistring (1.1-r1)
+#29 4.813 (7/13) Installing libidn2 (2.3.4-r1)
+#29 4.870 (8/13) Installing nghttp2-libs (1.55.1-r0)
+#29 4.910 (9/13) Installing libcurl (8.2.1-r0)
+#29 4.991 (10/13) Installing libexpat (2.5.0-r1)
+#29 5.025 (11/13) Installing pcre2 (10.42-r1)
+#29 5.100 (12/13) Installing git (2.40.1-r0)
+#29 5.713 (13/13) Installing make (4.4.1-r1)
+#29 5.752 Executing busybox-1.36.1-r0.trigger
+#29 5.760 OK: 20 MiB in 29 packages
+#29 DONE 15.9s
+
+#30 [indexer 4/7] COPY images/indexer/disabled.go /tmp/disabled.go
+#30 DONE 4.9s
+
+#31 [indexer 5/7] COPY images/indexer/start.sh /tmp/start.sh
+#31 DONE 3.1s
+
+#32 [indexer 6/7] COPY images/indexer/install.sh /tmp/install.sh
+#32 DONE 1.1s
+
+#33 [indexer 7/7] RUN /tmp/install.sh
+#33 1.442 install.sh: starting indexer image install
+#33 1.444 Cloning into '/opt/indexer'...
+#33 8.132 make: /opt/indexer/mule/scripts/ostype.sh: No such file or directory
+#33 8.360 go: downloading github.com/algorand/go-algorand-sdk/v2 v2.2.0
+#33 8.551 go: downloading github.com/sirupsen/logrus v1.8.1
+#33 8.563 go: downloading github.com/algorand/oapi-codegen v1.12.0-algorand.0
+#33 8.572 go: downloading github.com/spf13/cobra v1.3.0
+#33 8.595 go: downloading github.com/getkin/kin-openapi v0.107.0
+#33 8.723 go: downloading github.com/labstack/echo/v4 v4.9.1
+#33 9.186 go: downloading github.com/spf13/pflag v1.0.5
+#33 9.189 go: downloading github.com/spf13/viper v1.10.0
+#33 9.213 go: downloading github.com/stretchr/testify v1.8.2
+#33 9.302 go: downloading github.com/algorand/avm-abi v0.2.0
+#33 9.303 go: downloading github.com/labstack/echo-contrib v0.11.0
+#33 9.315 go: downloading gopkg.in/yaml.v3 v3.0.1
+#33 9.410 go: downloading github.com/jackc/pgx/v4 v4.13.0
+#33 9.532 go: downloading github.com/orlangure/gnomock v0.28.0
+#33 9.541 go: downloading github.com/algorand/go-codec/codec v1.1.10
+#33 9.656 go: downloading github.com/jackc/pgconn v1.10.0
+#33 9.668 go: downloading github.com/jackc/pgerrcode v0.0.0-20201024163028-a0d42d470451
+#33 9.746 go: downloading github.com/prometheus/client_golang v1.11.1
+#33 9.827 go: downloading github.com/davecgh/go-spew v1.1.1
+#33 9.879 go: downloading github.com/pmezard/go-difflib v1.0.0
+#33 10.13 go: downloading golang.org/x/sys v0.6.0
+#33 10.14 go: downloading github.com/go-openapi/jsonpointer v0.19.6
+#33 10.14 go: downloading github.com/invopop/yaml v0.1.0
+#33 10.17 go: downloading github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
+#33 10.58 go: downloading github.com/labstack/gommon v0.4.0
+#33 10.59 go: downloading golang.org/x/crypto v0.6.0
+#33 10.61 go: downloading golang.org/x/net v0.8.0
+#33 10.95 go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.1
+#33 11.01 go: downloading gopkg.in/yaml.v2 v2.4.0
+#33 12.69 go: downloading github.com/apapsch/go-jsonmerge/v2 v2.0.0
+#33 12.76 go: downloading github.com/golang-jwt/jwt v3.2.2+incompatible
+#33 12.76 go: downloading github.com/valyala/fasttemplate v1.2.1
+#33 12.83 go: downloading golang.org/x/time v0.0.0-20220411224347-583f2d630306
+#33 13.74 go: downloading github.com/stretchr/objx v0.5.0
+#33 13.74 go: downloading github.com/jackc/pgproto3/v2 v2.1.1
+#33 13.74 go: downloading github.com/jackc/pgio v1.0.0
+#33 13.89 go: downloading github.com/jackc/pgtype v1.8.1
+#33 13.89 go: downloading github.com/jackc/puddle v1.1.3
+#33 14.14 go: downloading github.com/fsnotify/fsnotify v1.5.1
+#33 14.15 go: downloading github.com/magiconair/properties v1.8.5
+#33 14.15 go: downloading github.com/mitchellh/mapstructure v1.5.0
+#33 14.19 go: downloading github.com/spf13/afero v1.6.0
+#33 14.20 go: downloading github.com/spf13/cast v1.4.1
+#33 14.24 go: downloading github.com/spf13/jwalterweatherman v1.1.0
+#33 14.27 go: downloading github.com/subosito/gotenv v1.2.0
+#33 14.29 go: downloading gopkg.in/ini.v1 v1.66.2
+#33 14.40 go: downloading github.com/prometheus/common v0.26.0
+#33 15.74 go: downloading github.com/jackc/chunkreader/v2 v2.0.1
+#33 15.77 go: downloading github.com/jackc/pgpassfile v1.0.0
+#33 15.80 go: downloading github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b
+#33 15.84 go: downloading golang.org/x/text v0.8.0
+#33 17.30 go: downloading github.com/beorn7/perks v1.0.1
+#33 17.39 go: downloading github.com/cespare/xxhash/v2 v2.1.2
+#33 17.40 go: downloading github.com/golang/protobuf v1.5.3
+#33 17.42 go: downloading github.com/prometheus/client_model v0.2.0
+#33 17.46 go: downloading github.com/prometheus/procfs v0.6.0
+#33 17.69 go: downloading github.com/docker/docker v23.0.4+incompatible
+#33 19.04 go: downloading github.com/docker/go-connections v0.4.0
+#33 19.12 go: downloading github.com/google/uuid v1.3.0
+#33 19.19 go: downloading go.uber.org/zap v1.24.0
+#33 19.37 go: downloading golang.org/x/sync v0.1.0
+#33 19.45 go: downloading github.com/lib/pq v1.10.8
+#33 21.81 go: downloading github.com/go-openapi/swag v0.22.3
+#33 21.88 go: downloading github.com/mattn/go-colorable v0.1.12
+#33 21.91 go: downloading github.com/mattn/go-isatty v0.0.14
+#33 21.92 go: downloading github.com/russross/blackfriday/v2 v2.1.0
+#33 21.92 go: downloading github.com/valyala/bytebufferpool v1.0.0
+#33 21.96 go: downloading github.com/hashicorp/hcl v1.0.0
+#33 21.97 go: downloading github.com/pelletier/go-toml v1.9.4
+#33 21.97 go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.1
+#33 22.07 go: downloading google.golang.org/protobuf v1.28.1
+#33 24.69 go: downloading go.uber.org/atomic v1.9.0
+#33 25.15 go: downloading go.uber.org/multierr v1.7.0
+#33 27.90 go: downloading github.com/mailru/easyjson v0.7.7
+#33 27.98 go: downloading github.com/docker/go-units v0.4.0
+#33 28.02 go: downloading github.com/opencontainers/image-spec v1.0.2
+#33 28.07 go: downloading github.com/pkg/errors v0.9.1
+#33 28.07 go: downloading github.com/docker/distribution v2.8.0+incompatible
+#33 28.40 go: downloading github.com/opencontainers/go-digest v1.0.0
+#33 28.45 go: downloading github.com/josharian/intern v1.0.0
+#33 28.46 go: downloading github.com/gogo/protobuf v1.3.2
+#33 43.92 cd cmd/algorand-indexer && go build -ldflags='-X github.com/algorand/indexer/v3/version.Hash=d9c41d9f63b75c2a2dafe52199df9ae7055e75fd -X github.com/algorand/indexer/v3/version.CompileTime=2023-09-11T20:11:49+0000 -X "github.com/algorand/indexer/v3/version.ReleaseVersion=Dev Build"'
+#33 120.8 go install github.com/vektra/mockery/v2@v2.20.0
+#33 121.4 go: downloading github.com/vektra/mockery/v2 v2.20.0
+#33 122.4 go: downloading github.com/rs/zerolog v1.27.0
+#33 122.4 go: downloading github.com/chigopher/pathlib v0.12.0
+#33 122.5 go: downloading github.com/spf13/cobra v1.4.0
+#33 122.5 go: downloading github.com/mitchellh/go-homedir v1.1.0
+#33 122.5 go: downloading github.com/spf13/viper v1.12.0
+#33 122.5 go: downloading golang.org/x/crypto v0.0.0-20220525230936-793ad666bf5e
+#33 123.3 go: downloading golang.org/x/tools v0.5.0
+#33 124.9 go: downloading github.com/spf13/afero v1.8.2
+#33 125.0 go: downloading github.com/fsnotify/fsnotify v1.5.4
+#33 125.2 go: downloading github.com/spf13/cast v1.5.0
+#33 125.9 go: downloading golang.org/x/term v0.0.0-20220526004731-065cf7ba2467
+#33 126.2 go: downloading github.com/subosito/gotenv v1.4.0
+#33 126.5 go: downloading gopkg.in/ini.v1 v1.66.6
+#33 126.8 go: downloading github.com/pelletier/go-toml/v2 v2.0.2
+#33 126.8 go: downloading github.com/magiconair/properties v1.8.6
+#33 127.5 go: downloading golang.org/x/sys v0.4.0
+#33 127.5 go: downloading golang.org/x/text v0.3.7
+#33 131.6 go: downloading github.com/pelletier/go-toml v1.9.5
+#33 135.5 go: downloading golang.org/x/mod v0.7.0
+#33 154.9 cd idb && mockery --name=IndexerDb
+#33 155.0 11 Sep 23 20:13 UTC INF Starting mockery dry-run=false version=v2.20.0
+#33 155.0 11 Sep 23 20:13 UTC INF Using config:  dry-run=false version=v2.20.0
+#33 155.0 11 Sep 23 20:13 UTC INF Walking dry-run=false version=v2.20.0
+#33 155.8 11 Sep 23 20:13 UTC INF Generating mock dry-run=false interface=IndexerDb qualified-name=github.com/algorand/indexer/v3/idb version=v2.20.0
+#33 156.1 install.sh: seconds it took to get to finish indexer image install: 155s
+#33 DONE 169.7s
+
+#34 [indexer] exporting to image
+#34 exporting layers
+#34 exporting layers 146.5s done
+#34 writing image sha256:cd3aa6fbeb6ce9d26926cde436b6b07fe3eb44b466bf493090f5bc4f140d5ce1 0.0s done
+#34 naming to docker.io/library/sandbox-indexer 0.0s done
+#34 DONE 146.6s
+* docker compose up -d
+ Network sandbox_default  Creating
+ Network sandbox_default  Created
+ Container algorand-sandbox-algod  Creating
+ Container algorand-sandbox-postgres  Creating
+ Container algorand-sandbox-algod  Created
+ Container algorand-sandbox-postgres  Created
+ Container algorand-sandbox-conduit  Creating
+ Container algorand-sandbox-conduit  Created
+ Container algorand-sandbox-indexer  Creating
+ Container algorand-sandbox-indexer  Created
+ Container algorand-sandbox-algod  Starting
+ Container algorand-sandbox-postgres  Starting
+ Container algorand-sandbox-algod  Started
+ Container algorand-sandbox-postgres  Started
+ Container algorand-sandbox-conduit  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint algorand-sandbox-conduit (a7f047e333ad190d1873285021d233ddeb912fca05984dc4bc2d160c02a00387): Bind for 0.0.0.0:3998 failed: port is already allocated
+* docker compose up -d
+ Container algorand-sandbox-postgres  Creating
+ Container algorand-sandbox-algod  Creating
+ Container algorand-sandbox-algod  Created
+ Container algorand-sandbox-postgres  Created
+ Container algorand-sandbox-conduit  Creating
+ Container algorand-sandbox-conduit  Created
+ Container algorand-sandbox-indexer  Creating
+ Container algorand-sandbox-indexer  Created
+ Container algorand-sandbox-postgres  Starting
+ Container algorand-sandbox-algod  Starting
+ Container algorand-sandbox-postgres  Started
+ Container algorand-sandbox-algod  Started
+ Container algorand-sandbox-conduit  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint algorand-sandbox-conduit (dd3d0e126b3c706b0cbaa083859d7f1bd1f2e30785140fbcfcb2239eb54d9ad4): Bind for 0.0.0.0:3998 failed: port is already allocated
+.clean file NOT FOUND. Sandbox images will NOT be rebuilt.
+* docker compose up -d
+ Container algorand-sandbox-algod  Created
+ Container algorand-sandbox-postgres  Created
+ Container algorand-sandbox-postgres  Starting
+ Container algorand-sandbox-algod  Starting
+ Container algorand-sandbox-postgres  Started
+ Container algorand-sandbox-algod  Started
+ Container algorand-sandbox-conduit  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint algorand-sandbox-conduit (a945ac3ebc2a009daabae8ceb38a4510965735d9cf53bf2645d4e97edb6fb37a): Bind for 0.0.0.0:3998 failed: port is already allocated
+* docker compose down
+ Container algorand-sandbox-indexer  Stopping
+ Container algorand-sandbox-indexer  Stopped
+ Container algorand-sandbox-indexer  Removing
+ Container algorand-sandbox-indexer  Removed
+ Container algorand-sandbox-conduit  Stopping
+ Container algorand-sandbox-conduit  Stopped
+ Container algorand-sandbox-conduit  Removing
+ Container algorand-sandbox-conduit  Removed
+ Container algorand-sandbox-algod  Stopping
+ Container algorand-sandbox-postgres  Stopping
+ Container algorand-sandbox-algod  Stopped
+ Container algorand-sandbox-algod  Removing
+ Container algorand-sandbox-postgres  Stopped
+ Container algorand-sandbox-postgres  Removing
+ Container algorand-sandbox-postgres  Removed
+ Container algorand-sandbox-algod  Removed
+ Network sandbox_default  Removing
+ Network sandbox_default  Removed
+* docker rmi sandbox_algod sandbox_indexer
+Error response from daemon: No such image: sandbox_algod:latest
+Error response from daemon: No such image: sandbox_indexer:latest
+* docker compose rm -f
+No stopped containers
+* docker rmi 6547b9c78c7c
+0f75a6d44cad
+165d605060e2
+Deleted: sha256:6547b9c78c7cf0ba8a557803fdde8b41e6d99e52044bb20d549861e6777ee5b3
+Deleted: sha256:0f75a6d44caddb9c5ce3d8f05c3e4db00fff1de9144a830ed5650e0207082028
+Deleted: sha256:165d605060e22017de99a8e4fef77543a6349913cb1389d94ae98ff64b70fa86
+.clean file found in sandbox directory. Rebuilding images...
+* docker compose build --no-cache --progress plain
+--progress is a global compose flag, better use `docker compose --progress xx build ...#0 building with "default" instance using docker driver
+
+#1 [algod internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.59kB 0.0s done
+#1 DONE 0.1s
+
+#2 [algod internal] load .dockerignore
+#2 transferring context: 73B 0.0s done
+#2 DONE 0.1s
+
+#3 [algod internal] load metadata for docker.io/library/golang:1.20.5
+#3 DONE 2.1s
+
+#4 [algod 1/7] FROM docker.io/library/golang:1.20.5@sha256:fd9306e1c664bd49a11d4a4a04e41303430e069e437d137876e9290a555e06fb
+#4 CACHED
+
+#5 [algod internal] load build context
+#5 transferring context: 119.71kB 0.0s done
+#5 DONE 0.1s
+
+#6 [algod 2/7] RUN echo "Installing from source.  -- "
+#6 0.457 Installing from source.  -- 
+#6 DONE 0.5s
+
+#7 [algod 3/7] RUN apt-get update && apt-get install -y apt-utils curl git git-core bsdmainutils python3
+#7 1.004 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#7 1.131 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+#7 1.214 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#7 1.297 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8906 kB]
+#7 4.472 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [4952 B]
+#7 4.535 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [61.6 kB]
+#7 5.553 Fetched 9224 kB in 5s (1889 kB/s)
+#7 5.553 Reading package lists...
+#7 6.215 Reading package lists...
+#7 6.851 Building dependency tree...
+#7 7.028 Reading state information...
+#7 7.311 git is already the newest version (1:2.39.2-1.1).
+#7 7.311 python3 is already the newest version (3.11.2-1+b1).
+#7 7.311 python3 set to manually installed.
+#7 7.311 The following additional packages will be installed:
+#7 7.313   bsdextrautils libcurl3-gnutls libcurl4 ncal
+#7 7.317 Suggested packages:
+#7 7.317   calendar whois vacation mailutils
+#7 7.371 The following NEW packages will be installed:
+#7 7.374   apt-utils bsdextrautils bsdmainutils ncal
+#7 7.376 The following packages will be upgraded:
+#7 7.380   curl libcurl3-gnutls libcurl4
+#7 7.453 3 upgraded, 4 newly installed, 0 to remove and 8 not upgraded.
+#7 7.453 Need to get 1503 kB of archives.
+#7 7.453 After this operation, 1485 kB of additional disk space will be used.
+#7 7.453 Get:1 http://deb.debian.org/debian bookworm/main amd64 apt-utils amd64 2.6.1 [309 kB]
+#7 7.809 Get:2 http://deb.debian.org/debian bookworm/main amd64 bsdextrautils amd64 2.38.1-5+b1 [86.6 kB]
+#7 7.913 Get:3 http://deb.debian.org/debian bookworm/main amd64 ncal amd64 12.1.8 [19.7 kB]
+#7 7.975 Get:4 http://deb.debian.org/debian bookworm/main amd64 bsdmainutils all 12.1.8 [5952 B]
+#7 8.044 Get:5 http://deb.debian.org/debian-security bookworm-security/main amd64 curl amd64 7.88.1-10+deb12u1 [314 kB]
+#7 8.218 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 libcurl4 amd64 7.88.1-10+deb12u1 [386 kB]
+#7 8.400 Get:7 http://deb.debian.org/debian-security bookworm-security/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u1 [381 kB]
+#7 8.807 debconf: delaying package configuration, since apt-utils is not installed
+#7 8.862 Fetched 1503 kB in 1s (1306 kB/s)
+#7 8.915 Selecting previously unselected package apt-utils.
+#7 8.915 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15610 files and directories currently installed.)
+#7 9.009 Preparing to unpack .../0-apt-utils_2.6.1_amd64.deb ...
+#7 9.020 Unpacking apt-utils (2.6.1) ...
+#7 9.295 Selecting previously unselected package bsdextrautils.
+#7 9.298 Preparing to unpack .../1-bsdextrautils_2.38.1-5+b1_amd64.deb ...
+#7 9.315 Unpacking bsdextrautils (2.38.1-5+b1) ...
+#7 9.409 Selecting previously unselected package ncal.
+#7 9.412 Preparing to unpack .../2-ncal_12.1.8_amd64.deb ...
+#7 9.426 Unpacking ncal (12.1.8) ...
+#7 9.525 Selecting previously unselected package bsdmainutils.
+#7 9.528 Preparing to unpack .../3-bsdmainutils_12.1.8_all.deb ...
+#7 9.543 Unpacking bsdmainutils (12.1.8) ...
+#7 9.616 Preparing to unpack .../4-curl_7.88.1-10+deb12u1_amd64.deb ...
+#7 9.652 Unpacking curl (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 9.873 Preparing to unpack .../5-libcurl4_7.88.1-10+deb12u1_amd64.deb ...
+#7 9.949 Unpacking libcurl4:amd64 (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 10.19 Preparing to unpack .../6-libcurl3-gnutls_7.88.1-10+deb12u1_amd64.deb ...
+#7 10.24 Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 10.47 Setting up apt-utils (2.6.1) ...
+#7 10.52 Setting up bsdextrautils (2.38.1-5+b1) ...
+#7 10.56 Setting up ncal (12.1.8) ...
+#7 10.62 Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u1) ...
+#7 10.68 Setting up bsdmainutils (12.1.8) ...
+#7 10.73 Setting up libcurl4:amd64 (7.88.1-10+deb12u1) ...
+#7 10.78 Setting up curl (7.88.1-10+deb12u1) ...
+#7 10.84 Processing triggers for libc-bin (2.36-9) ...
+#7 DONE 11.3s
+
+#8 [algod 4/7] COPY . /tmp
+#8 DONE 0.1s
+
+#9 [algod 5/7] RUN /tmp/images/algod/install.sh     -d "/node"     -c "stable"     -u ""     -b ""     -s ""
+#9 0.638 /tmp/images/algod /go
+#9 0.639 Installing algod with options:
+#9 0.639   BINDIR = /node
+#9 0.639   CHANNEL = stable
+#9 0.639   URL = 
+#9 0.640   BRANCH = 
+#9 0.640   SHA = 
+#9 0.659 Current Version = 0
+#9 3.648 updater binary was installed at /tmp/images/algod/updater
+#9 4.354 Latest Version = 12886081536
+#9 4.354 New version found
+#9 4.376 Checking for files matching: 'channel/stable/node_stable_linux-amd64_' in bucket algorand-releases
+#9 72.99 Update Downloaded to /tmp/tmp.vqutFpKzt0/12886081536.tar.gz
+#9 72.99 Expanding update...
+#9 78.00 Validating update...
+#9 78.00 Starting the new update script to complete the installation...
+#9 78.02 ... Resuming installation from the latest update script
+#9 78.02 Current Version = 0
+#9 78.02 Backing up current binary files...
+#9 78.03 Backing up current data files from /node/data...
+#9 78.04 Installing new binary files into /node
+#9 81.41 Installing new data files into /node/data...
+#9 81.41 Copying genesis files locally
+#9 81.45 Checking for new ledger in /node/data
+#9 81.91 Cannot read genesis file /node/data/genesis.json: open /node/data/genesis.json: no such file or directory
+#9 81.91 Updating genesis files for default network
+#9 82.02 New genesis ID, resetting wallets
+#9 82.02 New Ledger - restoring genesis accounts in /node/data
+#9 82.03 New Ledger - importing rootkeys for genesis accounts
+#9 82.33 Imported 0 keys
+#9 82.33 Applying migration fixups...
+#9 82.34 Deleting existing log files in /node/data
+#9 82.34 Install complete - restart node manually
+#9 DONE 82.7s
+
+#10 [algod 6/7] RUN sed -i   -e "s/NETWORK_NUM_ROUNDS/30000/"   -e "s/ALGOD_FOLLOWER_PORT/3999/"   "//tmp/images/algod/DevModeNetwork.json" &&  /tmp/images/algod/setup.py  --bin-dir "/node"  --data-dir "/opt/data"  --start-script "/opt/start_algod.sh"  --network-dir "/opt/testnetwork"  --network-template "//tmp/images/algod/DevModeNetwork.json"  --network-token "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"  --algod-port "4001"  --kmd-port "4002"  --bootstrap-url ""  --genesis-file "/tmp/"  --archival ""
+#10 0.959 Created new rootkey: /opt/testnetwork/Wallet1.rootkey
+#10 0.995 Created new rootkey: /opt/testnetwork/Wallet2.rootkey
+#10 0.995 Generating Wallet1's keys for a period of 30000 rounds
+#10 1.036 Created new rootkey: /opt/testnetwork/Wallet3.rootkey
+#10 1.100 Generating Wallet3's keys for a period of 30000 rounds
+#10 1.148 Generating Wallet2's keys for a period of 30000 rounds
+#10 7.629 participation key generation for Wallet1 completed successfully
+#10 7.705 participation key generation for Wallet3 completed successfully
+#10 7.747 participation key generation for Wallet2 completed successfully
+#10 7.769 https://github.com/algorandfoundation/specs/tree/abd3d4823c6f77349fc04c3af7b1e99fe4df699f 100000
+#10 7.770 Created 3 new rootkeys and 3 new partkeys in 6.859920305s.
+#10 7.770 NOTICE: Participation keys are valid for a period of 30000 rounds. After this many rounds the network will stall unless new keys are registered.
+#10 10.84 Network sandnet created under /opt/testnetwork
+#10 10.85 Configuring network with the following arguments:
+#10 10.85 {   'algod_port': '4001',
+#10 10.85     'archival': False,
+#10 10.85     'bin_dir': '/node',
+#10 10.85     'bootstrap_url': '',
+#10 10.85     'data_dir': '/opt/data',
+#10 10.85     'genesis_file': '/tmp/',
+#10 10.85     'kmd_port': '4002',
+#10 10.85     'network_dir': '/opt/testnetwork',
+#10 10.85     'network_template': '//tmp/images/algod/DevModeNetwork.json',
+#10 10.85     'network_token': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+#10 10.85     'start_script': '/opt/start_algod.sh'}
+#10 10.85 Creating a private network.
+#10 10.85 Start commands for /opt/start_algod.sh:
+#10 10.85 ("startCommands=['/node/goal network start -r /opt/testnetwork', '/node/kmd "
+#10 10.85  "start -t 0 -d /opt/testnetwork/Node/kmd-v0.5']")
+#10 10.85 Finished preparing start script '/opt/start_algod.sh' under /opt/
+#10 10.85 Creating symlink /opt/data -> /opt/testnetwork/Node
+#10 10.85 writing to node_config_path=[/opt/testnetwork/Node/config.json] config json: { "Version": 27, "GossipFanout": 1, "EndpointAddress": "0.0.0.0:4001", "Archival":false, "EnableDeveloperAPI":true, "NetAddress": "127.0.0.1:0", "DNSBootstrapID": "", "EnableTxnEvalTracer": true, "MaxAcctLookback": 256}
+#10 10.85 writing to kmd_config_path=[/opt/testnetwork/Node/kmd-v0.5/kmd_config.json] config json: { "address":"0.0.0.0:4002",  "allowed_origins":["*"] }
+#10 DONE 10.9s
+
+#11 [algod 7/7] WORKDIR /opt/data
+#11 DONE 0.1s
+
+#12 [algod] exporting to image
+#12 exporting layers
+#12 exporting layers 3.3s done
+#12 writing image sha256:3ffcf1e59e1306202273b64c83a9dc4ce4c4e2c0edf995fadc5788a21c21651c 0.0s done
+#12 naming to docker.io/library/sandbox-algod 0.0s done
+#12 DONE 3.4s
+
+#13 [conduit internal] load build definition from Dockerfile
+#13 transferring dockerfile: 565B done
+#13 DONE 0.1s
+
+#14 [conduit internal] load .dockerignore
+#14 transferring context: 73B done
+#14 DONE 0.1s
+
+#15 [conduit internal] load metadata for docker.io/library/golang:1.20.5-alpine
+#15 DONE 1.3s
+
+#16 [conduit 1/7] FROM docker.io/library/golang:1.20.5-alpine@sha256:fd9d9d7194ec40a9a6ae89fcaef3e47c47de7746dd5848ab5343695dbbd09f8c
+#16 DONE 0.0s
+
+#17 [conduit 2/7] WORKDIR /opt/conduit
+#17 CACHED
+
+#18 [conduit internal] load build context
+#18 transferring context: 196B done
+#18 DONE 0.0s
+
+#19 [conduit 3/7] RUN apk add --no-cache git make bash
+#19 0.470 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+#19 1.193 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+#19 3.973 (1/13) Installing ncurses-terminfo-base (6.4_p20230506-r0)
+#19 4.130 (2/13) Installing libncursesw (6.4_p20230506-r0)
+#19 4.674 (3/13) Installing readline (8.2.1-r1)
+#19 6.414 (4/13) Installing bash (5.2.15-r5)
+#19 12.75 Executing bash-5.2.15-r5.post-install
+#19 12.76 (5/13) Installing brotli-libs (1.0.9-r14)
+#19 13.24 (6/13) Installing libunistring (1.1-r1)
+#19 19.22 (7/13) Installing libidn2 (2.3.4-r1)
+#19 19.86 (8/13) Installing nghttp2-libs (1.55.1-r0)
+#19 20.05 (9/13) Installing libcurl (8.2.1-r0)
+#19 20.50 (10/13) Installing libexpat (2.5.0-r1)
+#19 20.63 (11/13) Installing pcre2 (10.42-r1)
+#19 21.85 (12/13) Installing git (2.40.1-r0)
+#19 29.23 (13/13) Installing make (4.4.1-r1)
+#19 29.30 Executing busybox-1.36.1-r0.trigger
+#19 29.31 OK: 20 MiB in 29 packages
+#19 DONE 29.7s
+
+#20 [conduit 4/7] COPY images/conduit/disabled.go /tmp/disabled.go
+#20 DONE 0.3s
+
+#21 [conduit 5/7] COPY images/conduit/start.sh /tmp/start.sh
+#21 DONE 0.2s
+
+#22 [conduit 6/7] COPY images/conduit/install.sh /tmp/install.sh
+#22 DONE 0.2s
+
+#23 [conduit 7/7] RUN /tmp/install.sh
+#23 0.882 install.sh: starting conduit image install
+#23 0.895 Cloning into '/opt/conduit'...
+#23 2.724 go: downloading github.com/yuin/goldmark v1.5.4
+#23 2.824 go: downloading github.com/algorand/go-algorand-sdk/v2 v2.2.0
+#23 2.833 go: downloading github.com/prometheus/client_golang v1.11.1
+#23 2.860 go: downloading github.com/spf13/cobra v1.7.0
+#23 2.862 go: downloading github.com/sirupsen/logrus v1.9.3
+#23 2.905 go: downloading gopkg.in/yaml.v3 v3.0.1
+#23 3.946 go: downloading github.com/google/uuid v1.3.0
+#23 3.948 go: downloading github.com/opensearch-project/opensearch-go/v2 v2.3.0
+#23 4.111 go: downloading golang.org/x/sys v0.10.0
+#23 4.215 go: downloading github.com/beorn7/perks v1.0.1
+#23 4.305 go: downloading github.com/cespare/xxhash/v2 v2.2.0
+#23 4.305 go: downloading github.com/golang/protobuf v1.5.3
+#23 5.457 go: downloading github.com/prometheus/client_model v0.4.0
+#23 5.472 go: downloading github.com/prometheus/common v0.32.1
+#23 5.472 go: downloading github.com/prometheus/procfs v0.11.0
+#23 5.716 go: downloading github.com/algorand/go-codec/codec v1.1.10
+#23 5.773 go: downloading github.com/algorand/indexer/v3 v3.0.0
+#23 5.858 go: downloading golang.org/x/crypto v0.11.0
+#23 7.321 go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.2
+#23 7.339 go: downloading github.com/spf13/pflag v1.0.5
+#23 7.647 go: downloading google.golang.org/protobuf v1.31.0
+#23 7.669 go: downloading github.com/google/go-querystring v1.0.0
+#23 9.138 go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.4
+#23 9.250 go: downloading github.com/pmezard/go-difflib v1.0.0
+#23 9.251 go: downloading github.com/davecgh/go-spew v1.1.1
+#23 9.257 go: downloading github.com/jackc/pgconn v1.10.0
+#23 9.264 go: downloading github.com/jackc/pgerrcode v0.0.0-20201024163028-a0d42d470451
+#23 9.275 go: downloading github.com/jackc/pgx/v4 v4.13.0
+#23 9.329 go: downloading github.com/russross/blackfriday/v2 v2.1.0
+#23 9.421 go: downloading github.com/algorand/oapi-codegen v1.12.0-algorand.0
+#23 9.465 go: downloading github.com/getkin/kin-openapi v0.107.0
+#23 9.517 go: downloading github.com/labstack/echo/v4 v4.9.1
+#23 9.562 go: downloading github.com/algorand/avm-abi v0.2.0
+#23 9.775 go: downloading github.com/jackc/chunkreader/v2 v2.0.1
+#23 9.787 go: downloading github.com/jackc/pgio v1.0.0
+#23 9.787 go: downloading github.com/jackc/pgpassfile v1.0.0
+#23 9.796 go: downloading github.com/jackc/pgproto3/v2 v2.1.1
+#23 9.881 go: downloading github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b
+#23 9.894 go: downloading golang.org/x/text v0.11.0
+#23 10.00 go: downloading github.com/jackc/puddle v1.1.3
+#23 10.03 go: downloading github.com/jackc/pgtype v1.8.1
+#23 10.62 go: downloading github.com/labstack/gommon v0.4.0
+#23 10.63 go: downloading golang.org/x/net v0.12.0
+#23 10.87 go: downloading github.com/go-openapi/jsonpointer v0.19.6
+#23 11.06 go: downloading github.com/invopop/yaml v0.1.0
+#23 11.62 go: downloading github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
+#23 11.62 go: downloading github.com/apapsch/go-jsonmerge/v2 v2.0.0
+#23 12.03 go: downloading github.com/mattn/go-colorable v0.1.13
+#23 12.36 go: downloading github.com/mattn/go-isatty v0.0.19
+#23 12.64 go: downloading github.com/valyala/fasttemplate v1.2.1
+#23 12.64 go: downloading github.com/go-openapi/swag v0.22.3
+#23 12.75 go: downloading github.com/valyala/bytebufferpool v1.0.0
+#23 12.94 go: downloading github.com/mailru/easyjson v0.7.7
+#23 13.16 go: downloading github.com/josharian/intern v1.0.0
+#23 16.21 go generate ./... && cd cmd/conduit && go build -ldflags='-X github.com/algorand/conduit/version.Hash=b7ed6617d822c920f517a68d0635cb11485cec3d -X github.com/algorand/conduit/version.ShortHash=b7ed661 -X github.com/algorand/conduit/version.CompileTime=2023-09-11T22:25:46+0000 -X "github.com/algorand/conduit/version.ReleaseVersion=Dev Build"'
+#23 100.9 install.sh: seconds it took to get to finish conduit image install: 100s
+#23 DONE 102.4s
+
+#24 [conduit] exporting to image
+#24 exporting layers
+#24 exporting layers 8.7s done
+#24 writing image sha256:9a2aa4cbcbf7798e7a61767d9be449b8912f69399f9badce7181e543ba56a3e8 0.0s done
+#24 naming to docker.io/library/sandbox-conduit 0.1s done
+#24 DONE 8.8s
+
+#25 [indexer internal] load .dockerignore
+#25 transferring context: 73B 0.0s done
+#25 DONE 0.1s
+
+#26 [indexer internal] load build definition from Dockerfile
+#26 transferring dockerfile: 565B 0.0s done
+#26 DONE 0.1s
+
+#15 [indexer internal] load metadata for docker.io/library/golang:1.20.5-alpine
+#15 DONE 2.4s
+
+#16 [indexer 1/7] FROM docker.io/library/golang:1.20.5-alpine@sha256:fd9d9d7194ec40a9a6ae89fcaef3e47c47de7746dd5848ab5343695dbbd09f8c
+#16 DONE 0.0s
+
+#27 [indexer 2/7] WORKDIR /opt/indexer
+#27 CACHED
+
+#28 [indexer internal] load build context
+#28 transferring context: 2.84kB 0.1s done
+#28 DONE 0.2s
+
+#29 [indexer 3/7] RUN apk add --no-cache git make bash
+#29 1.638 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+#29 2.945 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+#29 8.550 (1/13) Installing ncurses-terminfo-base (6.4_p20230506-r0)
+#29 8.616 (2/13) Installing libncursesw (6.4_p20230506-r0)
+#29 8.738 (3/13) Installing readline (8.2.1-r1)
+#29 8.830 (4/13) Installing bash (5.2.15-r5)
+#29 9.017 Executing bash-5.2.15-r5.post-install
+#29 9.037 (5/13) Installing brotli-libs (1.0.9-r14)
+#29 9.155 (6/13) Installing libunistring (1.1-r1)
+#29 9.410 (7/13) Installing libidn2 (2.3.4-r1)
+#29 9.456 (8/13) Installing nghttp2-libs (1.55.1-r0)
+#29 9.507 (9/13) Installing libcurl (8.2.1-r0)
+#29 9.598 (10/13) Installing libexpat (2.5.0-r1)
+#29 9.642 (11/13) Installing pcre2 (10.42-r1)
+#29 9.736 (12/13) Installing git (2.40.1-r0)
+#29 12.62 (13/13) Installing make (4.4.1-r1)
+#29 12.69 Executing busybox-1.36.1-r0.trigger
+#29 12.73 OK: 20 MiB in 29 packages
+#29 DONE 13.2s
+
+#30 [indexer 4/7] COPY images/indexer/disabled.go /tmp/disabled.go
+#30 DONE 0.2s
+
+#31 [indexer 5/7] COPY images/indexer/start.sh /tmp/start.sh
+#31 DONE 1.0s
+
+#32 [indexer 6/7] COPY images/indexer/install.sh /tmp/install.sh
+#32 DONE 0.9s
+
+#33 [indexer 7/7] RUN /tmp/install.sh
+#33 2.124 install.sh: starting indexer image install
+#33 2.129 Cloning into '/opt/indexer'...
+#33 6.901 make: /opt/indexer/mule/scripts/ostype.sh: No such file or directory
+#33 7.177 go: downloading github.com/algorand/go-algorand-sdk/v2 v2.2.0
+#33 7.178 go: downloading github.com/algorand/avm-abi v0.2.0
+#33 8.580 go: downloading github.com/getkin/kin-openapi v0.107.0
+#33 8.580 go: downloading github.com/labstack/echo/v4 v4.9.1
+#33 8.581 go: downloading github.com/labstack/echo-contrib v0.11.0
+#33 8.598 go: downloading github.com/sirupsen/logrus v1.8.1
+#33 10.72 go: downloading gopkg.in/yaml.v3 v3.0.1
+#33 21.63 go: downloading github.com/algorand/oapi-codegen v1.12.0-algorand.0
+#33 23.74 go: downloading github.com/spf13/cobra v1.3.0
+#33 25.55 go: downloading github.com/spf13/pflag v1.0.5
+#33 26.41 go: downloading github.com/spf13/viper v1.10.0
+#33 27.04 go: downloading github.com/stretchr/testify v1.8.2
+#33 27.27 go: downloading github.com/jackc/pgconn v1.10.0
+#33 29.32 go: downloading github.com/jackc/pgerrcode v0.0.0-20201024163028-a0d42d470451
+#33 29.42 go: downloading github.com/jackc/pgx/v4 v4.13.0
+#33 29.65 go: downloading github.com/algorand/go-codec/codec v1.1.10
+#33 29.72 go: downloading github.com/orlangure/gnomock v0.28.0
+#33 40.17 go: downloading github.com/davecgh/go-spew v1.1.1
+#33 42.44 go: downloading github.com/pmezard/go-difflib v1.0.0
+#33 43.33 go: downloading golang.org/x/sys v0.6.0
+#33 43.35 go: downloading github.com/labstack/gommon v0.4.0
+#33 43.49 go: downloading github.com/prometheus/client_golang v1.11.1
+#33 44.35 go: downloading github.com/prometheus/common v0.26.0
+#33 45.15 go: downloading golang.org/x/crypto v0.6.0
+#33 45.71 go: downloading golang.org/x/net v0.8.0
+#33 46.06 go: downloading github.com/golang-jwt/jwt v3.2.2+incompatible
+#33 47.32 go: downloading github.com/valyala/fasttemplate v1.2.1
+#33 47.61 go: downloading golang.org/x/time v0.0.0-20220411224347-583f2d630306
+#33 49.00 go: downloading github.com/go-openapi/jsonpointer v0.19.6
+#33 48.62 go: downloading github.com/invopop/yaml v0.1.0
+#33 49.04 go: downloading github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
+#33 50.31 go: downloading github.com/apapsch/go-jsonmerge/v2 v2.0.0
+#33 50.42 go: downloading github.com/fsnotify/fsnotify v1.5.1
+#33 50.52 go: downloading github.com/magiconair/properties v1.8.5
+#33 50.60 go: downloading github.com/mitchellh/mapstructure v1.5.0
+#33 50.78 go: downloading github.com/spf13/afero v1.6.0
+#33 50.83 go: downloading github.com/spf13/cast v1.4.1
+#33 50.83 go: downloading github.com/subosito/gotenv v1.2.0
+#33 50.84 go: downloading github.com/spf13/jwalterweatherman v1.1.0
+#33 50.84 go: downloading gopkg.in/ini.v1 v1.66.2
+#33 51.47 go: downloading github.com/stretchr/objx v0.5.0
+#33 51.52 go: downloading github.com/jackc/chunkreader/v2 v2.0.1
+#33 51.57 go: downloading github.com/jackc/pgio v1.0.0
+#33 51.58 go: downloading github.com/jackc/pgpassfile v1.0.0
+#33 51.59 go: downloading github.com/jackc/pgproto3/v2 v2.1.1
+#33 51.62 go: downloading github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b
+#33 51.72 go: downloading golang.org/x/text v0.8.0
+#33 51.77 go: downloading github.com/jackc/pgtype v1.8.1
+#33 51.78 go: downloading github.com/jackc/puddle v1.1.3
+#33 52.04 go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.1
+#33 52.19 go: downloading gopkg.in/yaml.v2 v2.4.0
+#33 52.62 go: downloading github.com/docker/docker v23.0.4+incompatible
+#33 88.84 go: downloading github.com/docker/go-connections v0.4.0
+#33 89.51 go: downloading github.com/google/uuid v1.3.0
+#33 89.86 go: downloading go.uber.org/zap v1.24.0
+#33 95.96 go: downloading golang.org/x/sync v0.1.0
+#33 95.96 go: downloading github.com/lib/pq v1.10.8
+#33 96.03 go: downloading github.com/mattn/go-colorable v0.1.12
+#33 96.04 go: downloading github.com/mattn/go-isatty v0.0.14
+#33 96.11 go: downloading github.com/beorn7/perks v1.0.1
+#33 96.13 go: downloading github.com/cespare/xxhash/v2 v2.1.2
+#33 96.14 go: downloading github.com/golang/protobuf v1.5.3
+#33 98.94 go: downloading github.com/prometheus/client_model v0.2.0
+#33 98.97 go: downloading github.com/prometheus/procfs v0.6.0
+#33 99.63 go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.1
+#33 99.79 go: downloading github.com/valyala/bytebufferpool v1.0.0
+#33 100.6 go: downloading github.com/go-openapi/swag v0.22.3
+#33 101.3 go: downloading github.com/hashicorp/hcl v1.0.0
+#33 102.0 go: downloading github.com/pelletier/go-toml v1.9.4
+#33 102.4 go: downloading github.com/russross/blackfriday/v2 v2.1.0
+#33 103.6 go: downloading github.com/opencontainers/image-spec v1.0.2
+#33 103.6 go: downloading github.com/docker/go-units v0.4.0
+#33 103.6 go: downloading github.com/pkg/errors v0.9.1
+#33 103.7 go: downloading github.com/docker/distribution v2.8.0+incompatible
+#33 106.7 go: downloading github.com/opencontainers/go-digest v1.0.0
+#33 106.7 go: downloading go.uber.org/atomic v1.9.0
+#33 106.7 go: downloading go.uber.org/multierr v1.7.0
+#33 108.9 go: downloading google.golang.org/protobuf v1.28.1
+#33 130.9 go: downloading github.com/mailru/easyjson v0.7.7
+#33 130.9 go: downloading github.com/gogo/protobuf v1.3.2
+#33 138.1 go: downloading github.com/josharian/intern v1.0.0
+#33 144.3 cd cmd/algorand-indexer && go build -ldflags='-X github.com/algorand/indexer/v3/version.Hash=d9c41d9f63b75c2a2dafe52199df9ae7055e75fd -X github.com/algorand/indexer/v3/version.CompileTime=2023-09-11T22:30:03+0000 -X "github.com/algorand/indexer/v3/version.ReleaseVersion=Dev Build"'
+#33 237.7 go install github.com/vektra/mockery/v2@v2.20.0
+#33 239.9 go: downloading github.com/vektra/mockery/v2 v2.20.0
+#33 240.8 go: downloading github.com/chigopher/pathlib v0.12.0
+#33 240.8 go: downloading github.com/rs/zerolog v1.27.0
+#33 240.8 go: downloading github.com/spf13/cobra v1.4.0
+#33 240.8 go: downloading github.com/spf13/viper v1.12.0
+#33 240.8 go: downloading github.com/mitchellh/go-homedir v1.1.0
+#33 240.8 go: downloading golang.org/x/crypto v0.0.0-20220525230936-793ad666bf5e
+#33 241.4 go: downloading golang.org/x/tools v0.5.0
+#33 242.3 go: downloading github.com/spf13/afero v1.8.2
+#33 242.5 go: downloading github.com/fsnotify/fsnotify v1.5.4
+#33 242.5 go: downloading github.com/spf13/cast v1.5.0
+#33 242.8 go: downloading golang.org/x/term v0.0.0-20220526004731-065cf7ba2467
+#33 243.2 go: downloading golang.org/x/text v0.3.7
+#33 243.3 go: downloading github.com/subosito/gotenv v1.4.0
+#33 243.3 go: downloading gopkg.in/ini.v1 v1.66.6
+#33 243.6 go: downloading github.com/pelletier/go-toml/v2 v2.0.2
+#33 243.6 go: downloading github.com/magiconair/properties v1.8.6
+#33 247.0 go: downloading github.com/pelletier/go-toml v1.9.5
+#33 247.8 go: downloading golang.org/x/sys v0.4.0
+#33 251.5 go: downloading golang.org/x/mod v0.7.0
+#33 284.0 cd idb && mockery --name=IndexerDb
+#33 284.3 11 Sep 23 22:32 UTC INF Starting mockery dry-run=false version=v2.20.0
+#33 284.3 11 Sep 23 22:32 UTC INF Using config:  dry-run=false version=v2.20.0
+#33 284.3 11 Sep 23 22:32 UTC INF Walking dry-run=false version=v2.20.0
+#33 284.8 11 Sep 23 22:32 UTC INF Generating mock dry-run=false interface=IndexerDb qualified-name=github.com/algorand/indexer/v3/idb version=v2.20.0
+#33 284.8 install.sh: seconds it took to get to finish indexer image install: 283s
+#33 DONE 295.1s
+
+#34 [indexer] exporting to image
+#34 exporting layers
+#34 exporting layers 17.1s done
+#34 writing image sha256:782e734c98fb755c2ccf3d23ad89fcec64903e42c8022a434105f9dc1ffcec8a 0.0s done
+#34 naming to docker.io/library/sandbox-indexer 0.0s done
+#34 DONE 17.2s
+* docker compose up -d
+ Network sandbox_default  Creating
+ Network sandbox_default  Created
+ Container algorand-sandbox-postgres  Creating
+ Container algorand-sandbox-algod  Creating
+ Container algorand-sandbox-algod  Created
+ Container algorand-sandbox-postgres  Created
+ Container algorand-sandbox-conduit  Creating
+ Container algorand-sandbox-conduit  Created
+ Container algorand-sandbox-indexer  Creating
+ Container algorand-sandbox-indexer  Created
+ Container algorand-sandbox-postgres  Starting
+ Container algorand-sandbox-algod  Starting
+ Container algorand-sandbox-postgres  Started
+ Container algorand-sandbox-algod  Started
+ Container algorand-sandbox-conduit  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint algorand-sandbox-conduit (595584e524388b0496ec2a4ba7dd7af4daf5adcad4efef70525523dbc7103bb4): Bind for 0.0.0.0:3998 failed: port is already allocated
+.clean file NOT FOUND. Sandbox images will NOT be rebuilt.
+* docker compose up -d
+ Container algorand-sandbox-algod  Created
+ Container algorand-sandbox-postgres  Created
+ Container algorand-sandbox-postgres  Starting
+ Container algorand-sandbox-algod  Starting
+ Container algorand-sandbox-postgres  Started
+ Container algorand-sandbox-algod  Started
+ Container algorand-sandbox-conduit  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint algorand-sandbox-conduit (f4dd5800dec71fb3880d05958f4eb0ddb939f44a453ef16c43c4eed0c7389030): Bind for 0.0.0.0:3998 failed: port is already allocated
+* docker compose down
+ Container algorand-sandbox-indexer  Stopping
+ Container algorand-sandbox-indexer  Stopped
+ Container algorand-sandbox-indexer  Removing
+ Container algorand-sandbox-indexer  Removed
+ Container algorand-sandbox-conduit  Stopping
+ Container algorand-sandbox-conduit  Stopped
+ Container algorand-sandbox-conduit  Removing
+ Container algorand-sandbox-conduit  Removed
+ Container algorand-sandbox-algod  Stopping
+ Container algorand-sandbox-postgres  Stopping
+ Container algorand-sandbox-postgres  Stopped
+ Container algorand-sandbox-postgres  Removing
+ Container algorand-sandbox-algod  Stopped
+ Container algorand-sandbox-algod  Removing
+ Container algorand-sandbox-postgres  Removed
+ Container algorand-sandbox-algod  Removed
+ Network sandbox_default  Removing
+ Network sandbox_default  Removed
+* docker rmi sandbox_algod sandbox_indexer
+Error response from daemon: No such image: sandbox_algod:latest
+Error response from daemon: No such image: sandbox_indexer:latest
+* docker compose rm -f
+No stopped containers
+* docker rmi cd3aa6fbeb6c
+d5d789a53598
+6fd5f30c503e
+Deleted: sha256:cd3aa6fbeb6ce9d26926cde436b6b07fe3eb44b466bf493090f5bc4f140d5ce1
+Deleted: sha256:d5d789a535984d6eca98145675050de1f8f7a656f15c64992da540f8ce44484f
+Deleted: sha256:6fd5f30c503e9037258013d04a6a268040ecc60fc2a5c338eec6956cc8a85c4d
+.clean file found in sandbox directory. Rebuilding images...
+* docker compose build --no-cache --progress plain
+--progress is a global compose flag, better use `docker compose --progress xx build ...#0 building with "default" instance using docker driver
+
+#1 [algod internal] load .dockerignore
+#1 transferring context: 73B 0.0s done
+#1 DONE 0.1s
+
+#2 [algod internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.59kB 0.0s done
+#2 DONE 0.1s
+
+#3 [algod internal] load metadata for docker.io/library/golang:1.20.5
+#3 DONE 2.1s
+
+#4 [algod 1/7] FROM docker.io/library/golang:1.20.5@sha256:fd9306e1c664bd49a11d4a4a04e41303430e069e437d137876e9290a555e06fb
+#4 CACHED
+
+#5 [algod internal] load build context
+#5 transferring context: 119.71kB 0.0s done
+#5 DONE 0.0s
+
+#6 [algod 2/7] RUN echo "Installing from source.  -- "
+#6 0.549 Installing from source.  -- 
+#6 DONE 0.6s
+
+#7 [algod 3/7] RUN apt-get update && apt-get install -y apt-utils curl git git-core bsdmainutils python3
+#7 0.948 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#7 1.075 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+#7 1.156 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#7 1.225 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8906 kB]
+#7 3.571 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [4952 B]
+#7 3.632 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [61.6 kB]
+#7 4.654 Fetched 9224 kB in 4s (2322 kB/s)
+#7 4.654 Reading package lists...
+#7 5.337 Reading package lists...
+#7 5.945 Building dependency tree...
+#7 6.120 Reading state information...
+#7 6.447 git is already the newest version (1:2.39.2-1.1).
+#7 6.447 python3 is already the newest version (3.11.2-1+b1).
+#7 6.447 python3 set to manually installed.
+#7 6.447 The following additional packages will be installed:
+#7 6.450   bsdextrautils libcurl3-gnutls libcurl4 ncal
+#7 6.453 Suggested packages:
+#7 6.453   calendar whois vacation mailutils
+#7 6.501 The following NEW packages will be installed:
+#7 6.504   apt-utils bsdextrautils bsdmainutils ncal
+#7 6.505 The following packages will be upgraded:
+#7 6.508   curl libcurl3-gnutls libcurl4
+#7 6.701 3 upgraded, 4 newly installed, 0 to remove and 8 not upgraded.
+#7 6.701 Need to get 1503 kB of archives.
+#7 6.701 After this operation, 1485 kB of additional disk space will be used.
+#7 6.701 Get:1 http://deb.debian.org/debian bookworm/main amd64 apt-utils amd64 2.6.1 [309 kB]
+#7 6.951 Get:2 http://deb.debian.org/debian bookworm/main amd64 bsdextrautils amd64 2.38.1-5+b1 [86.6 kB]
+#7 7.062 Get:3 http://deb.debian.org/debian bookworm/main amd64 ncal amd64 12.1.8 [19.7 kB]
+#7 7.138 Get:4 http://deb.debian.org/debian bookworm/main amd64 bsdmainutils all 12.1.8 [5952 B]
+#7 7.221 Get:5 http://deb.debian.org/debian-security bookworm-security/main amd64 curl amd64 7.88.1-10+deb12u1 [314 kB]
+#7 7.404 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 libcurl4 amd64 7.88.1-10+deb12u1 [386 kB]
+#7 7.627 Get:7 http://deb.debian.org/debian-security bookworm-security/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u1 [381 kB]
+#7 8.029 debconf: delaying package configuration, since apt-utils is not installed
+#7 8.079 Fetched 1503 kB in 1s (1219 kB/s)
+#7 8.136 Selecting previously unselected package apt-utils.
+#7 8.136 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15610 files and directories currently installed.)
+#7 8.267 Preparing to unpack .../0-apt-utils_2.6.1_amd64.deb ...
+#7 8.280 Unpacking apt-utils (2.6.1) ...
+#7 8.608 Selecting previously unselected package bsdextrautils.
+#7 8.611 Preparing to unpack .../1-bsdextrautils_2.38.1-5+b1_amd64.deb ...
+#7 8.629 Unpacking bsdextrautils (2.38.1-5+b1) ...
+#7 8.728 Selecting previously unselected package ncal.
+#7 8.731 Preparing to unpack .../2-ncal_12.1.8_amd64.deb ...
+#7 8.743 Unpacking ncal (12.1.8) ...
+#7 8.840 Selecting previously unselected package bsdmainutils.
+#7 8.843 Preparing to unpack .../3-bsdmainutils_12.1.8_all.deb ...
+#7 8.859 Unpacking bsdmainutils (12.1.8) ...
+#7 8.931 Preparing to unpack .../4-curl_7.88.1-10+deb12u1_amd64.deb ...
+#7 8.968 Unpacking curl (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 9.137 Preparing to unpack .../5-libcurl4_7.88.1-10+deb12u1_amd64.deb ...
+#7 9.190 Unpacking libcurl4:amd64 (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 9.387 Preparing to unpack .../6-libcurl3-gnutls_7.88.1-10+deb12u1_amd64.deb ...
+#7 9.428 Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u1) over (7.88.1-10) ...
+#7 9.603 Setting up apt-utils (2.6.1) ...
+#7 9.639 Setting up bsdextrautils (2.38.1-5+b1) ...
+#7 9.675 Setting up ncal (12.1.8) ...
+#7 9.711 Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u1) ...
+#7 9.745 Setting up bsdmainutils (12.1.8) ...
+#7 9.783 Setting up libcurl4:amd64 (7.88.1-10+deb12u1) ...
+#7 9.818 Setting up curl (7.88.1-10+deb12u1) ...
+#7 9.855 Processing triggers for libc-bin (2.36-9) ...
+#7 DONE 10.2s
+
+#8 [algod 4/7] COPY . /tmp
+#8 DONE 0.2s
+
+#9 [algod 5/7] RUN /tmp/images/algod/install.sh     -d "/node"     -c "stable"     -u ""     -b ""     -s ""
+#9 0.623 /tmp/images/algod /go
+#9 0.623 Installing algod with options:
+#9 0.627   BINDIR = /node
+#9 0.627   CHANNEL = stable
+#9 0.627   URL = 
+#9 0.627   BRANCH = 
+#9 0.627   SHA = 
+#9 0.655 Current Version = 0
+#9 3.825 updater binary was installed at /tmp/images/algod/updater
+#9 4.635 Latest Version = 12886081536
+#9 4.635 New version found
+#9 4.654 Checking for files matching: 'channel/stable/node_stable_linux-amd64_' in bucket algorand-releases
+#9 54.96 Update Downloaded to /tmp/tmp.jt07880hoD/12886081536.tar.gz
+#9 54.96 Expanding update...
+#9 68.10 Validating update...
+#9 68.10 Starting the new update script to complete the installation...
+#9 68.11 ... Resuming installation from the latest update script
+#9 68.12 Current Version = 0
+#9 68.12 Backing up current binary files...
+#9 68.13 Backing up current data files from /node/data...
+#9 68.14 Installing new binary files into /node
+#9 76.12 Installing new data files into /node/data...
+#9 76.13 Copying genesis files locally
+#9 76.14 Checking for new ledger in /node/data
+#9 76.76 Cannot read genesis file /node/data/genesis.json: open /node/data/genesis.json: no such file or directory
+#9 76.77 Updating genesis files for default network
+#9 76.90 New genesis ID, resetting wallets
+#9 76.90 New Ledger - restoring genesis accounts in /node/data
+#9 76.90 New Ledger - importing rootkeys for genesis accounts
+#9 77.11 Imported 0 keys
+#9 77.11 Applying migration fixups...
+#9 77.12 Deleting existing log files in /node/data
+#9 77.12 Install complete - restart node manually
+#9 DONE 78.1s
+
+#10 [algod 6/7] RUN sed -i   -e "s/NETWORK_NUM_ROUNDS/300000/"   -e "s/ALGOD_FOLLOWER_PORT/3999/"   "//tmp/images/algod/template.json" &&  /tmp/images/algod/setup.py  --bin-dir "/node"  --data-dir "/opt/data"  --start-script "/opt/start_algod.sh"  --network-dir "/opt/testnetwork"  --network-template "//tmp/images/algod/template.json"  --network-token "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"  --algod-port "4001"  --kmd-port "4002"  --bootstrap-url ""  --genesis-file "/tmp/"  --archival ""
+#10 0.834 Created new rootkey: /opt/testnetwork/Wallet1.rootkey
+#10 0.867 Created new rootkey: /opt/testnetwork/Wallet4.rootkey
+#10 0.867 Generating Wallet1's keys for a period of 300000 rounds
+#10 0.877 Created new rootkey: /opt/testnetwork/Wallet3.rootkey
+#10 0.877 Created new rootkey: /opt/testnetwork/Wallet2.rootkey
+#10 0.947 Generating Wallet2's keys for a period of 300000 rounds
+#10 43.11 participation key generation for Wallet1 completed successfully
+#10 43.16 participation key generation for Wallet2 completed successfully
+#10 43.18 https://github.com/algorandfoundation/specs/tree/abd3d4823c6f77349fc04c3af7b1e99fe4df699f 100000
+#10 43.18 Created 4 new rootkeys and 2 new partkeys in 42.390773037s.
+#10 43.18 NOTICE: Participation keys are valid for a period of 300000 rounds. After this many rounds the network will stall unless new keys are registered.
+#10 50.29 Network sandnet created under /opt/testnetwork
+#10 50.31 Configuring network with the following arguments:
+#10 50.31 {   'algod_port': '4001',
+#10 50.31     'archival': False,
+#10 50.31     'bin_dir': '/node',
+#10 50.31     'bootstrap_url': '',
+#10 50.31     'data_dir': '/opt/data',
+#10 50.31     'genesis_file': '/tmp/',
+#10 50.31     'kmd_port': '4002',
+#10 50.31     'network_dir': '/opt/testnetwork',
+#10 50.31     'network_template': '//tmp/images/algod/template.json',
+#10 50.31     'network_token': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+#10 50.31     'start_script': '/opt/start_algod.sh'}
+#10 50.31 Creating a private network.
+#10 50.31 Start commands for /opt/start_algod.sh:
+#10 50.31 ("startCommands=['/node/goal network start -r /opt/testnetwork', '/node/kmd "
+#10 50.31  "start -t 0 -d /opt/testnetwork/Node/kmd-v0.5']")
+#10 50.31 Finished preparing start script '/opt/start_algod.sh' under /opt/
+#10 50.31 Creating symlink /opt/data -> /opt/testnetwork/Node
+#10 50.31 writing to node_config_path=[/opt/testnetwork/Node/config.json] config json: { "Version": 27, "GossipFanout": 1, "EndpointAddress": "0.0.0.0:4001", "Archival":false, "EnableDeveloperAPI":true, "NetAddress": "127.0.0.1:0", "DNSBootstrapID": "", "EnableTxnEvalTracer": true, "MaxAcctLookback": 256}
+#10 50.31 writing to kmd_config_path=[/opt/testnetwork/Node/kmd-v0.5/kmd_config.json] config json: { "address":"0.0.0.0:4002",  "allowed_origins":["*"] }
+#10 DONE 50.4s
+
+#11 [algod 7/7] WORKDIR /opt/data
+#11 DONE 0.1s
+
+#12 [algod] exporting to image
+#12 exporting layers
+#12 exporting layers 3.0s done
+#12 writing image sha256:c8cbe66220f6df64bcb371ca2160198c5838fa6fcfc50df43ef82694457e8059 done
+#12 naming to docker.io/library/sandbox-algod 0.0s done
+#12 DONE 3.0s
+
+#13 [conduit internal] load .dockerignore
+#13 transferring context: 73B 0.0s done
+#13 DONE 0.1s
+
+#14 [conduit internal] load build definition from Dockerfile
+#14 transferring dockerfile: 565B done
+#14 DONE 0.1s
+
+#15 [conduit internal] load metadata for docker.io/library/golang:1.20.5-alpine
+#15 DONE 1.3s
+
+#16 [conduit 1/7] FROM docker.io/library/golang:1.20.5-alpine@sha256:fd9d9d7194ec40a9a6ae89fcaef3e47c47de7746dd5848ab5343695dbbd09f8c
+#16 DONE 0.0s
+
+#17 [conduit 2/7] WORKDIR /opt/conduit
+#17 CACHED
+
+#18 [conduit internal] load build context
+#18 transferring context: 196B 0.0s done
+#18 DONE 0.0s
+
+#19 [conduit 3/7] RUN apk add --no-cache git make bash
+#19 0.583 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+#19 0.891 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+#19 1.408 (1/13) Installing ncurses-terminfo-base (6.4_p20230506-r0)
+#19 1.458 (2/13) Installing libncursesw (6.4_p20230506-r0)
+#19 1.525 (3/13) Installing readline (8.2.1-r1)
+#19 1.567 (4/13) Installing bash (5.2.15-r5)
+#19 1.688 Executing bash-5.2.15-r5.post-install
+#19 1.698 (5/13) Installing brotli-libs (1.0.9-r14)
+#19 1.775 (6/13) Installing libunistring (1.1-r1)
+#19 1.918 (7/13) Installing libidn2 (2.3.4-r1)
+#19 1.958 (8/13) Installing nghttp2-libs (1.55.1-r0)
+#19 1.993 (9/13) Installing libcurl (8.2.1-r0)
+#19 2.059 (10/13) Installing libexpat (2.5.0-r1)
+#19 2.111 (11/13) Installing pcre2 (10.42-r1)
+#19 2.176 (12/13) Installing git (2.40.1-r0)
+#19 2.737 (13/13) Installing make (4.4.1-r1)
+#19 2.780 Executing busybox-1.36.1-r0.trigger
+#19 2.858 OK: 20 MiB in 29 packages
+#19 DONE 3.2s
+
+#20 [conduit 4/7] COPY images/conduit/disabled.go /tmp/disabled.go
+#20 DONE 0.1s
+
+#21 [conduit 5/7] COPY images/conduit/start.sh /tmp/start.sh
+#21 DONE 0.1s
+
+#22 [conduit 6/7] COPY images/conduit/install.sh /tmp/install.sh
+#22 DONE 0.1s
+
+#23 [conduit 7/7] RUN /tmp/install.sh
+#23 0.620 install.sh: starting conduit image install
+#23 0.625 Cloning into '/opt/conduit'...
+#23 2.100 go: downloading github.com/spf13/cobra v1.7.0
+#23 2.250 go: downloading github.com/sirupsen/logrus v1.9.3
+#23 2.267 go: downloading github.com/prometheus/client_golang v1.11.1
+#23 2.277 go: downloading github.com/algorand/go-algorand-sdk/v2 v2.2.0
+#23 2.289 go: downloading github.com/algorand/indexer/v3 v3.0.0
+#23 3.238 go: downloading github.com/algorand/go-codec/codec v1.1.10
+#23 3.441 go: downloading gopkg.in/yaml.v3 v3.0.1
+#23 3.452 go: downloading github.com/yuin/goldmark v1.5.4
+#23 3.647 go: downloading github.com/google/uuid v1.3.0
+#23 3.652 go: downloading github.com/opensearch-project/opensearch-go/v2 v2.3.0
+#23 3.948 go: downloading github.com/beorn7/perks v1.0.1
+#23 3.960 go: downloading github.com/cespare/xxhash/v2 v2.2.0
+#23 3.963 go: downloading github.com/golang/protobuf v1.5.3
+#23 4.246 go: downloading github.com/prometheus/client_model v0.4.0
+#23 4.303 go: downloading github.com/prometheus/common v0.32.1
+#23 4.303 go: downloading github.com/prometheus/procfs v0.11.0
+#23 4.307 go: downloading golang.org/x/sys v0.10.0
+#23 4.316 go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.2
+#23 4.321 go: downloading github.com/spf13/pflag v1.0.5
+#23 4.634 go: downloading golang.org/x/crypto v0.11.0
+#23 4.714 go: downloading github.com/google/go-querystring v1.0.0
+#23 5.644 go: downloading github.com/jackc/pgconn v1.10.0
+#23 5.661 go: downloading github.com/jackc/pgerrcode v0.0.0-20201024163028-a0d42d470451
+#23 5.690 go: downloading github.com/jackc/pgx/v4 v4.13.0
+#23 6.025 go: downloading github.com/davecgh/go-spew v1.1.1
+#23 6.041 go: downloading github.com/pmezard/go-difflib v1.0.0
+#23 6.337 go: downloading google.golang.org/protobuf v1.31.0
+#23 7.580 go: downloading github.com/russross/blackfriday/v2 v2.1.0
+#23 7.593 go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.4
+#23 7.605 go: downloading github.com/algorand/oapi-codegen v1.12.0-algorand.0
+#23 7.612 go: downloading github.com/getkin/kin-openapi v0.107.0
+#23 7.613 go: downloading github.com/labstack/echo/v4 v4.9.1
+#23 7.615 go: downloading github.com/algorand/avm-abi v0.2.0
+#23 7.810 go: downloading github.com/jackc/chunkreader/v2 v2.0.1
+#23 7.879 go: downloading github.com/jackc/pgio v1.0.0
+#23 7.886 go: downloading github.com/jackc/pgpassfile v1.0.0
+#23 7.954 go: downloading github.com/jackc/pgproto3/v2 v2.1.1
+#23 7.974 go: downloading github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b
+#23 7.988 go: downloading golang.org/x/text v0.11.0
+#23 8.544 go: downloading github.com/jackc/pgtype v1.8.1
+#23 8.569 go: downloading github.com/jackc/puddle v1.1.3
+#23 8.791 go: downloading github.com/labstack/gommon v0.4.0
+#23 8.933 go: downloading golang.org/x/net v0.12.0
+#23 9.312 go: downloading github.com/go-openapi/jsonpointer v0.19.6
+#23 9.531 go: downloading github.com/invopop/yaml v0.1.0
+#23 9.933 go: downloading github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
+#23 10.09 go: downloading github.com/apapsch/go-jsonmerge/v2 v2.0.0
+#23 10.10 go: downloading github.com/mattn/go-colorable v0.1.13
+#23 10.11 go: downloading github.com/mattn/go-isatty v0.0.19
+#23 10.14 go: downloading github.com/valyala/fasttemplate v1.2.1
+#23 10.20 go: downloading github.com/go-openapi/swag v0.22.3
+#23 10.23 go: downloading github.com/valyala/bytebufferpool v1.0.0
+#23 10.31 go: downloading github.com/mailru/easyjson v0.7.7
+#23 10.45 go: downloading github.com/josharian/intern v1.0.0
+#23 12.80 go generate ./... && cd cmd/conduit && go build -ldflags='-X github.com/algorand/conduit/version.Hash=b7ed6617d822c920f517a68d0635cb11485cec3d -X github.com/algorand/conduit/version.ShortHash=b7ed661 -X github.com/algorand/conduit/version.CompileTime=2023-09-11T22:45:48+0000 -X "github.com/algorand/conduit/version.ReleaseVersion=Dev Build"'
+#23 182.2 install.sh: seconds it took to get to finish conduit image install: 182s
+#23 DONE 191.4s
+
+#24 [conduit] exporting to image
+#24 exporting layers
+#24 exporting layers 123.5s done
+#24 writing image sha256:ec2aa096443d50272f007fa56b416b635e9098ab5622c77f59f09b221279eff2 0.0s done
+#24 naming to docker.io/library/sandbox-conduit 0.0s done
+#24 DONE 123.6s
+
+#25 [indexer internal] load .dockerignore
+#25 transferring context:
+#25 transferring context: 73B 0.0s done
+#25 DONE 0.1s
+
+#26 [indexer internal] load build definition from Dockerfile
+#26 transferring dockerfile: 565B 0.0s done
+#26 DONE 0.1s
+
+#15 [indexer internal] load metadata for docker.io/library/golang:1.20.5-alpine
+#15 DONE 4.5s
+
+#16 [indexer 1/7] FROM docker.io/library/golang:1.20.5-alpine@sha256:fd9d9d7194ec40a9a6ae89fcaef3e47c47de7746dd5848ab5343695dbbd09f8c
+#16 DONE 0.0s
+
+#27 [indexer 2/7] WORKDIR /opt/indexer
+#27 CACHED
+
+#28 [indexer internal] load build context
+#28 transferring context: 2.84kB 0.1s done
+#28 DONE 0.3s
+
+#29 [indexer 3/7] RUN apk add --no-cache git make bash
+#29 4.797 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+#29 5.957 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+#29 7.846 (1/13) Installing ncurses-terminfo-base (6.4_p20230506-r0)
+#29 10.28 (2/13) Installing libncursesw (6.4_p20230506-r0)
+#29 11.75 (3/13) Installing readline (8.2.1-r1)
+#29 11.95 (4/13) Installing bash (5.2.15-r5)
+#29 13.26 Executing bash-5.2.15-r5.post-install
+#29 13.86 (5/13) Installing brotli-libs (1.0.9-r14)
+#29 14.86 (6/13) Installing libunistring (1.1-r1)
+#29 16.00 (7/13) Installing libidn2 (2.3.4-r1)
+#29 16.17 (8/13) Installing nghttp2-libs (1.55.1-r0)
+#29 16.26 (9/13) Installing libcurl (8.2.1-r0)
+#29 17.31 (10/13) Installing libexpat (2.5.0-r1)
+#29 17.54 (11/13) Installing pcre2 (10.42-r1)
+#29 18.54 (12/13) Installing git (2.40.1-r0)
+#29 22.47 (13/13) Installing make (4.4.1-r1)
+#29 22.56 Executing busybox-1.36.1-r0.trigger
+#29 22.61 OK: 20 MiB in 29 packages
+#29 DONE 24.8s
+
+#30 [indexer 4/7] COPY images/indexer/disabled.go /tmp/disabled.go
+#30 DONE 0.3s
+
+#31 [indexer 5/7] COPY images/indexer/start.sh /tmp/start.sh
+#31 DONE 0.2s
+
+#32 [indexer 6/7] COPY images/indexer/install.sh /tmp/install.sh
+#32 DONE 0.4s
+
+#33 [indexer 7/7] RUN /tmp/install.sh
+#33 1.374 install.sh: starting indexer image install
+#33 1.480 Cloning into '/opt/indexer'...
+#33 14.81 make: /opt/indexer/mule/scripts/ostype.sh: No such file or directory
+#33 14.99 go: downloading github.com/algorand/go-algorand-sdk/v2 v2.2.0
+#33 15.08 go: downloading github.com/sirupsen/logrus v1.8.1
+#33 15.09 go: downloading github.com/spf13/cobra v1.3.0
+#33 15.10 go: downloading github.com/algorand/oapi-codegen v1.12.0-algorand.0
+#33 15.15 go: downloading github.com/algorand/avm-abi v0.2.0
+#33 15.16 go: downloading github.com/spf13/pflag v1.0.5
+#33 17.50 go: downloading github.com/getkin/kin-openapi v0.107.0
+#33 17.50 go: downloading github.com/spf13/viper v1.10.0
+#33 17.50 go: downloading github.com/labstack/echo/v4 v4.9.1
+#33 17.50 go: downloading github.com/labstack/echo-contrib v0.11.0
+#33 17.51 go: downloading gopkg.in/yaml.v3 v3.0.1
+#33 17.62 go: downloading github.com/stretchr/testify v1.8.2
+#33 19.27 go: downloading github.com/algorand/go-codec/codec v1.1.10
+#33 19.28 go: downloading github.com/jackc/pgx/v4 v4.13.0
+#33 19.28 go: downloading github.com/jackc/pgconn v1.10.0
+#33 19.29 go: downloading github.com/jackc/pgerrcode v0.0.0-20201024163028-a0d42d470451
+#33 20.26 go: downloading github.com/orlangure/gnomock v0.28.0
+#33 20.26 go: downloading github.com/prometheus/client_golang v1.11.1
+#33 20.26 go: downloading github.com/davecgh/go-spew v1.1.1
+#33 20.27 go: downloading github.com/pmezard/go-difflib v1.0.0
+#33 21.14 go: downloading golang.org/x/crypto v0.6.0
+#33 23.36 go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.1
+#33 23.36 go: downloading golang.org/x/sys v0.6.0
+#33 23.36 go: downloading gopkg.in/yaml.v2 v2.4.0
+#33 27.86 go: downloading github.com/labstack/gommon v0.4.0
+#33 27.91 go: downloading github.com/prometheus/common v0.26.0
+#33 28.14 go: downloading github.com/fsnotify/fsnotify v1.5.1
+#33 28.14 go: downloading github.com/magiconair/properties v1.8.5
+#33 28.66 go: downloading github.com/mitchellh/mapstructure v1.5.0
+#33 28.66 go: downloading github.com/spf13/afero v1.6.0
+#33 32.90 go: downloading github.com/spf13/cast v1.4.1
+#33 32.91 go: downloading github.com/spf13/jwalterweatherman v1.1.0
+#33 32.92 go: downloading github.com/subosito/gotenv v1.2.0
+#33 32.96 go: downloading gopkg.in/ini.v1 v1.66.2
+#33 32.98 go: downloading github.com/go-openapi/jsonpointer v0.19.6
+#33 33.01 go: downloading github.com/invopop/yaml v0.1.0
+#33 33.04 go: downloading github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
+#33 33.05 go: downloading github.com/apapsch/go-jsonmerge/v2 v2.0.0
+#33 33.07 go: downloading github.com/stretchr/objx v0.5.0
+#33 33.10 go: downloading golang.org/x/net v0.8.0
+#33 33.10 go: downloading github.com/golang-jwt/jwt v3.2.2+incompatible
+#33 33.10 go: downloading github.com/valyala/fasttemplate v1.2.1
+#33 33.11 go: downloading golang.org/x/time v0.0.0-20220411224347-583f2d630306
+#33 33.59 go: downloading github.com/jackc/chunkreader/v2 v2.0.1
+#33 33.59 go: downloading github.com/jackc/pgpassfile v1.0.0
+#33 33.59 go: downloading github.com/jackc/pgio v1.0.0
+#33 33.60 go: downloading github.com/jackc/pgproto3/v2 v2.1.1
+#33 33.60 go: downloading github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b
+#33 33.63 go: downloading golang.org/x/text v0.8.0
+#33 33.66 go: downloading github.com/jackc/puddle v1.1.3
+#33 33.67 go: downloading github.com/jackc/pgtype v1.8.1
+#33 33.67 go: downloading github.com/beorn7/perks v1.0.1
+#33 33.67 go: downloading github.com/cespare/xxhash/v2 v2.1.2
+#33 33.99 go: downloading github.com/golang/protobuf v1.5.3
+#33 34.41 go: downloading github.com/prometheus/client_model v0.2.0
+#33 34.41 go: downloading github.com/prometheus/procfs v0.6.0
+#33 34.91 go: downloading github.com/docker/docker v23.0.4+incompatible
+#33 34.91 go: downloading github.com/russross/blackfriday/v2 v2.1.0
+#33 38.05 go: downloading github.com/docker/go-connections v0.4.0
+#33 38.53 go: downloading github.com/google/uuid v1.3.0
+#33 38.59 go: downloading github.com/lib/pq v1.10.8
+#33 39.01 go: downloading go.uber.org/zap v1.24.0
+#33 40.14 go: downloading golang.org/x/sync v0.1.0
+#33 40.31 go: downloading github.com/mattn/go-colorable v0.1.12
+#33 40.83 go: downloading github.com/mattn/go-isatty v0.0.14
+#33 41.04 go: downloading github.com/hashicorp/hcl v1.0.0
+#33 47.31 go: downloading github.com/pelletier/go-toml v1.9.4
+#33 56.43 go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.1
+#33 56.43 go: downloading github.com/go-openapi/swag v0.22.3
+#33 56.50 go: downloading github.com/valyala/bytebufferpool v1.0.0
+#33 64.72 go: downloading google.golang.org/protobuf v1.28.1
+#33 66.38 go: downloading go.uber.org/atomic v1.9.0
+#33 66.38 go: downloading github.com/docker/go-units v0.4.0
+#33 66.38 go: downloading go.uber.org/multierr v1.7.0
+#33 66.53 go: downloading github.com/docker/distribution v2.8.0+incompatible
+#33 66.79 go: downloading github.com/pkg/errors v0.9.1
+#33 66.79 go: downloading github.com/opencontainers/image-spec v1.0.2
+#33 66.79 go: downloading github.com/mailru/easyjson v0.7.7
+#33 66.79 go: downloading github.com/opencontainers/go-digest v1.0.0
+#33 67.10 go: downloading github.com/gogo/protobuf v1.3.2
+#33 68.10 go: downloading github.com/josharian/intern v1.0.0
+#33 76.01 cd cmd/algorand-indexer && go build -ldflags='-X github.com/algorand/indexer/v3/version.Hash=d9c41d9f63b75c2a2dafe52199df9ae7055e75fd -X github.com/algorand/indexer/v3/version.CompileTime=2023-09-11T22:52:44+0000 -X "github.com/algorand/indexer/v3/version.ReleaseVersion=Dev Build"'
+#33 148.1 go install github.com/vektra/mockery/v2@v2.20.0
+#33 148.9 go: downloading github.com/vektra/mockery/v2 v2.20.0
+#33 150.3 go: downloading github.com/chigopher/pathlib v0.12.0
+#33 150.3 go: downloading github.com/rs/zerolog v1.27.0
+#33 150.5 go: downloading github.com/mitchellh/go-homedir v1.1.0
+#33 150.5 go: downloading github.com/spf13/cobra v1.4.0
+#33 151.0 go: downloading github.com/spf13/viper v1.12.0
+#33 151.2 go: downloading golang.org/x/crypto v0.0.0-20220525230936-793ad666bf5e
+#33 151.2 go: downloading golang.org/x/tools v0.5.0
+#33 152.5 go: downloading github.com/spf13/afero v1.8.2
+#33 153.7 go: downloading github.com/fsnotify/fsnotify v1.5.4
+#33 153.7 go: downloading github.com/spf13/cast v1.5.0
+#33 153.8 go: downloading golang.org/x/text v0.3.7
+#33 154.2 go: downloading github.com/subosito/gotenv v1.4.0
+#33 154.5 go: downloading gopkg.in/ini.v1 v1.66.6
+#33 154.5 go: downloading github.com/magiconair/properties v1.8.6
+#33 155.0 go: downloading github.com/pelletier/go-toml/v2 v2.0.2
+#33 155.4 go: downloading golang.org/x/sys v0.4.0
+#33 156.1 go: downloading golang.org/x/term v0.0.0-20220526004731-065cf7ba2467
+#33 157.7 go: downloading github.com/pelletier/go-toml v1.9.5
+#33 158.3 go: downloading golang.org/x/mod v0.7.0
+#33 203.7 cd idb && mockery --name=IndexerDb
+#33 203.7 11 Sep 23 22:54 UTC INF Starting mockery dry-run=false version=v2.20.0
+#33 203.7 11 Sep 23 22:54 UTC INF Using config:  dry-run=false version=v2.20.0
+#33 203.7 11 Sep 23 22:54 UTC INF Walking dry-run=false version=v2.20.0
+#33 224.5 11 Sep 23 22:55 UTC INF Generating mock dry-run=false interface=IndexerDb qualified-name=github.com/algorand/indexer/v3/idb version=v2.20.0
+#33 224.9 install.sh: seconds it took to get to finish indexer image install: 224s
+#33 DONE 229.6s
+
+#34 [indexer] exporting to image
+#34 exporting layers
+#34 exporting layers 80.8s done
+#34 writing image sha256:e07ae77b2b66826b2096758842bbad2e40539ec080743bfbc9591beb5b9c18ac 0.0s done
+#34 naming to docker.io/library/sandbox-indexer 0.0s done
+#34 DONE 80.8s
+* docker compose up -d
+ Network sandbox_default  Creating
+ Network sandbox_default  Created
+ Container algorand-sandbox-postgres  Creating
+ Container algorand-sandbox-algod  Creating
+ Container algorand-sandbox-algod  Created
+ Container algorand-sandbox-postgres  Created
+ Container algorand-sandbox-conduit  Creating
+ Container algorand-sandbox-conduit  Created
+ Container algorand-sandbox-indexer  Creating
+ Container algorand-sandbox-indexer  Created
+ Container algorand-sandbox-postgres  Starting
+ Container algorand-sandbox-algod  Starting
+ Container algorand-sandbox-postgres  Started
+ Container algorand-sandbox-algod  Started
+ Container algorand-sandbox-conduit  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint algorand-sandbox-conduit (5ac90ed2ac2e0edcca75d697e5817b7a7bf005b96cbe7ac4eb458302fe8c7cc2): Bind for 0.0.0.0:3998 failed: port is already allocated
+.clean file NOT FOUND. Sandbox images will NOT be rebuilt.
+* docker compose up -d
+ Container algorand-sandbox-algod  Created
+ Container algorand-sandbox-postgres  Created
+ Container algorand-sandbox-algod  Starting
+ Container algorand-sandbox-postgres  Starting
+ Container algorand-sandbox-postgres  Started
+ Container algorand-sandbox-algod  Started
+ Container algorand-sandbox-conduit  Starting
+ Container algorand-sandbox-conduit  Started
+ Container algorand-sandbox-indexer  Starting
+ Container algorand-sandbox-indexer  Started
+* docker compose down
+ Container algorand-sandbox-indexer  Stopping
+ Container algorand-sandbox-indexer  Stopped
+ Container algorand-sandbox-indexer  Removing
+ Container algorand-sandbox-indexer  Removed
+ Container algorand-sandbox-conduit  Stopping
+ Container algorand-sandbox-conduit  Stopped
+ Container algorand-sandbox-conduit  Removing
+ Container algorand-sandbox-conduit  Removed
+ Container algorand-sandbox-algod  Stopping
+ Container algorand-sandbox-postgres  Stopping
+ Container algorand-sandbox-postgres  Stopped
+ Container algorand-sandbox-postgres  Removing
+ Container algorand-sandbox-algod  Stopped
+ Container algorand-sandbox-algod  Removing
+ Container algorand-sandbox-postgres  Removed
+ Container algorand-sandbox-algod  Removed
+ Network sandbox_default  Removing
+ Network sandbox_default  Removed
+* docker rmi sandbox_algod sandbox_indexer
+Error response from daemon: No such image: sandbox_algod:latest
+Error response from daemon: No such image: sandbox_indexer:latest
+* docker compose rm -f
+No stopped containers
+* docker rmi 782e734c98fb
+9a2aa4cbcbf7
+3ffcf1e59e13
+Deleted: sha256:782e734c98fb755c2ccf3d23ad89fcec64903e42c8022a434105f9dc1ffcec8a
+Deleted: sha256:9a2aa4cbcbf7798e7a61767d9be449b8912f69399f9badce7181e543ba56a3e8
+Deleted: sha256:3ffcf1e59e1306202273b64c83a9dc4ce4c4e2c0edf995fadc5788a21c21651c
+.clean file NOT FOUND. Sandbox images will NOT be rebuilt.
+* docker compose up -d
+ Container algorand-sandbox-algod  Running
+ Container algorand-sandbox-postgres  Running
+ Container algorand-sandbox-conduit  Running
+ Container algorand-sandbox-indexer  Running
+.clean file NOT FOUND. Sandbox images will NOT be rebuilt.
+* docker compose up -d
+ Container algorand-sandbox-algod  Created
+ Container algorand-sandbox-postgres  Created
+ Container algorand-sandbox-conduit  Created
+ Container algorand-sandbox-indexer  Created
+ Container algorand-sandbox-algod  Starting
+ Container algorand-sandbox-postgres  Starting
+ Container algorand-sandbox-postgres  Started
+ Container algorand-sandbox-algod  Started
+ Container algorand-sandbox-conduit  Starting
+ Container algorand-sandbox-conduit  Started
+ Container algorand-sandbox-indexer  Starting
+ Container algorand-sandbox-indexer  Started
+.clean file NOT FOUND. Sandbox images will NOT be rebuilt.
+* docker compose up -d
+ Container algorand-sandbox-algod  Created
+ Container algorand-sandbox-postgres  Created
+ Container algorand-sandbox-conduit  Created
+ Container algorand-sandbox-indexer  Created
+ Container algorand-sandbox-algod  Starting
+ Container algorand-sandbox-postgres  Starting
+ Container algorand-sandbox-postgres  Started
+ Container algorand-sandbox-algod  Started
+ Container algorand-sandbox-conduit  Starting
+ Container algorand-sandbox-conduit  Started
+ Container algorand-sandbox-indexer  Starting
+ Container algorand-sandbox-indexer  Started
+.clean file NOT FOUND. Sandbox images will NOT be rebuilt.
+* docker compose up -d
+ Container algorand-sandbox-algod  Created
+ Container algorand-sandbox-postgres  Created
+ Container algorand-sandbox-conduit  Created
+ Container algorand-sandbox-indexer  Created
+ Container algorand-sandbox-algod  Starting
+ Container algorand-sandbox-postgres  Starting
+ Container algorand-sandbox-postgres  Started
+ Container algorand-sandbox-algod  Started
+ Container algorand-sandbox-conduit  Starting
+ Container algorand-sandbox-conduit  Started
+ Container algorand-sandbox-indexer  Starting
+ Container algorand-sandbox-indexer  Started

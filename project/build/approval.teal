@@ -1,0 +1,255 @@
+#pragma version 9
+txn ApplicationID
+int 0
+==
+bnz main_l19
+txn OnCompletion
+int DeleteApplication
+==
+bnz main_l18
+txn OnCompletion
+int UpdateApplication
+==
+bnz main_l17
+txn OnCompletion
+int OptIn
+==
+bnz main_l16
+txn OnCompletion
+int CloseOut
+==
+bnz main_l15
+txn OnCompletion
+int NoOp
+==
+bnz main_l7
+err
+main_l7:
+txna ApplicationArgs 0
+byte "start"
+==
+bnz main_l14
+txna ApplicationArgs 0
+byte "accept"
+==
+bnz main_l13
+txna ApplicationArgs 0
+byte "resolve"
+==
+bnz main_l11
+err
+main_l11:
+callsub resolveapp_5
+main_l12:
+int 0
+return
+main_l13:
+callsub acceptapp_3
+b main_l12
+main_l14:
+callsub startapp_2
+b main_l12
+main_l15:
+int 0
+return
+main_l16:
+txn Sender
+callsub getready_0
+int 1
+return
+main_l17:
+int 0
+return
+main_l18:
+int 0
+return
+main_l19:
+int 1
+return
+
+// get_ready
+getready_0:
+proto 1 0
+frame_dig -1
+byte "opponent"
+byte ""
+app_local_put
+frame_dig -1
+byte "book"
+byte ""
+app_local_put
+frame_dig -1
+byte "wager"
+int 0
+app_local_put
+frame_dig -1
+byte "hashed_info"
+byte ""
+app_local_put
+frame_dig -1
+byte "real_info"
+byte ""
+app_local_put
+retsub
+
+// check_if_empty
+checkifempty_1:
+proto 1 1
+frame_dig -1
+byte "opponent"
+app_local_get
+byte ""
+==
+frame_dig -1
+byte "book"
+app_local_get
+byte ""
+==
+&&
+frame_dig -1
+byte "wager"
+app_local_get
+int 0
+==
+&&
+frame_dig -1
+byte "hashed_info"
+app_local_get
+byte ""
+==
+&&
+frame_dig -1
+byte "real_info"
+app_local_get
+byte ""
+==
+&&
+retsub
+
+// start_app
+startapp_2:
+proto 0 0
+global GroupSize
+int 1
+==
+assert
+txn GroupIndex
+int 0
+==
+assert
+gtxn 0 RekeyTo
+global ZeroAddress
+==
+assert
+txna Accounts 1
+global CurrentApplicationID
+app_opted_in
+assert
+txn Sender
+callsub checkifempty_1
+assert
+txna Accounts 1
+callsub checkifempty_1
+assert
+txna Accounts 1
+byte "hashed_info"
+txna ApplicationArgs 1
+app_local_put
+txna Accounts 1
+byte "book"
+txna ApplicationArgs 2
+app_local_put
+int 1
+return
+
+// accept_app
+acceptapp_3:
+proto 0 0
+global GroupSize
+int 1
+==
+txn GroupIndex
+int 0
+==
+&&
+gtxn 0 RekeyTo
+global ZeroAddress
+==
+&&
+txna Accounts 1
+global CurrentApplicationID
+app_opted_in
+&&
+assert
+txn Sender
+byte "opponent"
+txna Accounts 1
+app_local_put
+txna Accounts 1
+byte "book"
+app_local_get
+store 0
+int 1
+return
+
+// transfer_money
+transfermoney_4:
+proto 2 0
+itxn_begin
+int pay
+itxn_field TypeEnum
+frame_dig -2
+txnas Accounts
+itxn_field Receiver
+frame_dig -1
+itxn_field Amount
+itxn_submit
+retsub
+
+// resolve_app
+resolveapp_5:
+proto 0 0
+global GroupSize
+int 2
+==
+txn GroupIndex
+int 0
+==
+&&
+gtxn 1 TypeEnum
+int pay
+==
+&&
+gtxn 1 Receiver
+global CurrentApplicationAddress
+==
+&&
+gtxn 0 RekeyTo
+global ZeroAddress
+==
+&&
+gtxn 1 RekeyTo
+global ZeroAddress
+==
+&&
+txna Accounts 1
+byte "hashed_info"
+app_local_get
+txna ApplicationArgs 1
+sha256
+==
+&&
+assert
+txn Sender
+byte "wager"
+gtxn 1 Amount
+app_local_put
+txna Accounts 0
+byte "wager"
+app_local_get
+store 1
+int 1
+load 1
+callsub transfermoney_4
+int 1
+return
